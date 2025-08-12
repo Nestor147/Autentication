@@ -1,0 +1,17 @@
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Infrastructure.deps.json
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Infrastructure.runtimeconfig.json
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Infrastructure.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Infrastructure.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Core.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Core.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.AssemblyInfo.cs
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentic.09330D99.Up2Date
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\refint\Autentication.Infrastructure.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.genruntimeconfig.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\ref\Autentication.Infrastructure.dll

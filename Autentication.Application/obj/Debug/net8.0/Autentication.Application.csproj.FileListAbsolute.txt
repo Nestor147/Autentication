@@ -1,0 +1,15 @@
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\bin\Debug\net8.0\Autentication.Application.deps.json
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\bin\Debug\net8.0\Autentication.Application.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\bin\Debug\net8.0\Autentication.Application.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\bin\Debug\net8.0\Autentication.Core.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\bin\Debug\net8.0\Autentication.Core.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.csproj.AssemblyReference.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.AssemblyInfoInputs.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.AssemblyInfo.cs
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.csproj.CoreCompileInputs.cache
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentic.A7342767.Up2Date
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\refint\Autentication.Application.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.pdb
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\ref\Autentication.Application.dll
