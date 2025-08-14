@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using Autentication.Core.Entities.Autorizacion;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,16 @@ namespace Autentication.Core.Interfaces.Core
     public interface IUnitOfWork : IDisposable
     {
         // IUnitOfWork.cs
-        //public IGenericRepository<Pais> PaisRepository { get; }
-      
+        public IGenericRepository<Aplicacion> AplicacionRepository { get; }
+        public IGenericRepository<AuditoriaLogin> AuditoriaLoginRepository { get; }
+        public IGenericRepository<DispositivoConocido> DispositivoConocidoRepository { get; }
+        public IGenericRepository<IntentoFallidoLogin> IntentoFallidoLoginRepository { get; }
+        public IGenericRepository<RefreshToken> RefreshTokenRepository { get; }
+        public IGenericRepository<Rol> RolRepository { get; }
+        public IGenericRepository<RolUsuario> RolUsuarioRepository { get; }
+        public IGenericRepository<TokenRevocado> TokenRevocadoRepository { get; }
+        public IGenericRepository<UsuarioSistema> UsuarioSistemaRepository { get; }
+
         IGenericRepository<T> Repository<T>() where T : class;
 
         int SaveChanges();

@@ -13,3 +13,4 @@ C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Applicati
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\refint\Autentication.Application.dll
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.pdb
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\ref\Autentication.Application.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Application\obj\Debug\net8.0\Autentication.Application.sourcelink.json

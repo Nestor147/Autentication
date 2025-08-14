@@ -15,3 +15,6 @@ C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastru
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.pdb
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.genruntimeconfig.cache
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\ref\Autentication.Infrastructure.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\obj\Debug\net8.0\Autentication.Infrastructure.sourcelink.json
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Application.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Infrastructure\bin\Debug\net8.0\Autentication.Application.pdb

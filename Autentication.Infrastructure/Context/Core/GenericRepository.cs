@@ -131,32 +131,17 @@ namespace Autentication.Infrastructure.Context.Core
             return new ResponsePostDetail { Proceso = proceso, FilasAfectadas = affected };
         }
 
-        //transacciones controladas para afectar a multiples tablas 
-        public Task AddAsyncWithoutSave(T entity)
-        {
-            return _dbSet.AddAsync(entity).AsTask();
-        }
-        public Task AddRangeAsyncWithoutSave(List<T> entities)
-        {
-            _dbSet.AddRange(entities);
-            return Task.CompletedTask;
-        }
-        public void UpdateWithoutSave(T entity)
-        {
-            _dbSet.Update(entity);
-        }
-        public void UpdateRangeWithoutSave(List<T> entities)
-        {
-            _dbSet.UpdateRange(entities);
-        }
-        public void RemoveWithoutSave(T entity)
-        {
-            _dbSet.Remove(entity);
-        }
-        public void RemoveRangeWithoutSave(List<T> entities)
-        {
-            _dbSet.RemoveRange(entities);
-        }
+        //Solo para autenticación
+        public IQueryable<T> Query(bool asNoTracking = true)
+        => asNoTracking ? _dbSet.AsNoTracking() : _dbSet.AsQueryable();
+
+        public async Task<T?> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default)
+            => await _dbSet.AsNoTracking().FirstOrDefaultAsync(predicate, ct);
+
+        public async Task<List<T>> WhereAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default)
+            => await _dbSet.AsNoTracking().Where(predicate).ToListAsync(ct);
+
+
 
     }
 }

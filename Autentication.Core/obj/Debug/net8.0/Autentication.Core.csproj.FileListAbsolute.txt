@@ -10,3 +10,4 @@ C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\refint\Autentication.Core.dll
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.pdb
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\ref\Autentication.Core.dll
+C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.sourcelink.json

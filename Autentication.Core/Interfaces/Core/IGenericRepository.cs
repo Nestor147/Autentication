@@ -36,5 +36,10 @@ namespace Autentication.Core.Interfaces.Core
         Task<ResponsePostDetail> DeleteAsync(int id, string proceso = "DELETE");
 
 
+        IQueryable<T> Query(bool asNoTracking = true);
+        Task<T?> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default);
+        Task<List<T>> WhereAsync(Expression<Func<T, bool>> predicate, CancellationToken ct = default);
+
+
     }
 }

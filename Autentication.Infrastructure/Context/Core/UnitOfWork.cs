@@ -1,4 +1,5 @@
-﻿using Autentication.Core.Interfaces.Core;
+﻿using Autentication.Core.Entities.Autorizacion;
+using Autentication.Core.Interfaces.Core;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Concurrent;
@@ -15,7 +16,15 @@ namespace Autentication.Infrastructure.Context.Core
         #region Atributos
         private readonly AppDbContext _context;
         private IDbContextTransaction _transaction;
-        //private readonly IGenericRepository<Pais> _paisRepository;
+        private readonly IGenericRepository<Aplicacion> _aplicacionRepository;
+        private readonly IGenericRepository<AuditoriaLogin> _auditoriaLoginRepository;
+        private readonly IGenericRepository<DispositivoConocido> _dispositivoConocidoRepository;
+        private readonly IGenericRepository<IntentoFallidoLogin> _intentoFallidoLoginRepository;
+        private readonly IGenericRepository<RefreshToken> _refreshTokenRepository;
+        private readonly IGenericRepository<Rol> _rolRepository;
+        private readonly IGenericRepository<RolUsuario> _rolUsuarioRepository;
+        private readonly IGenericRepository<TokenRevocado> _tokenRevocadoRepository;
+        private readonly IGenericRepository<UsuarioSistema> _usuarioSistemaRepository;
 
 
         // Repositorios genéricos por tipo
@@ -33,7 +42,23 @@ namespace Autentication.Infrastructure.Context.Core
 
 
         #region Metodos
-        //public IGenericRepository<Pais> PaisRepository => _paisRepository ?? new GenericRepository<Pais>(_context);
+        public IGenericRepository<Aplicacion> AplicacionRepository => _aplicacionRepository ?? new GenericRepository<Aplicacion>(_context);
+
+        public IGenericRepository<AuditoriaLogin> AuditoriaLoginRepository => _auditoriaLoginRepository ?? new GenericRepository<AuditoriaLogin>(_context);
+
+        public IGenericRepository<DispositivoConocido> DispositivoConocidoRepository => _dispositivoConocidoRepository ?? new GenericRepository<DispositivoConocido>(_context);
+
+        public IGenericRepository<IntentoFallidoLogin> IntentoFallidoLoginRepository => _intentoFallidoLoginRepository ?? new GenericRepository<IntentoFallidoLogin>(_context);
+
+        public IGenericRepository<RefreshToken> RefreshTokenRepository => _refreshTokenRepository ?? new GenericRepository<RefreshToken>(_context);
+
+        public IGenericRepository<Rol> RolRepository => _rolRepository ?? new GenericRepository<Rol>(_context);
+
+        public IGenericRepository<RolUsuario> RolUsuarioRepository => _rolUsuarioRepository ?? new GenericRepository<RolUsuario>(_context);
+
+        public IGenericRepository<TokenRevocado> TokenRevocadoRepository => _tokenRevocadoRepository ?? new GenericRepository<TokenRevocado>(_context);
+
+        public IGenericRepository<UsuarioSistema> UsuarioSistemaRepository => _usuarioSistemaRepository ?? new GenericRepository<UsuarioSistema>(_context);
 
         #endregion
 

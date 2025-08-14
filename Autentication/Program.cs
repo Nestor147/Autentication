@@ -1,44 +1,59 @@
-using Autentication.Infrastructure.DependencyInjection;
+using Autentication.Infrastructure.DependencyInjection; // <- tu DI (DbContext, UoW, repos)
+using Autentication.Web.Security;                       // <- KeyStore
+using MyCompany.Security.Jwt;
+using MyCompany.Security.Password;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Inyección de dependencias
+// 1) Infraestructura (asegúrate que AddInfrastructure use "DefaultConnection" o cambia el nombre aquí)
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// Servicios base
+// 2) Lee configuración de claves
+var passphrase = Environment.GetEnvironmentVariable("AUTH_KEY_PASSPHRASE")
+                 ?? builder.Configuration["Auth:KeyPassphrase"]
+                 ?? throw new InvalidOperationException("Falta AUTH_KEY_PASSPHRASE o Auth:KeyPassphrase");
+
+var kid = builder.Configuration["Auth:Kid"] ?? "k1";
+var rsaBits = int.TryParse(builder.Configuration["Auth:RsaBits"], out var bits) ? bits : 2048;
+
+// 3) Genera/carga llaves (con logs de error si algo pasa)
+var keyDir = Path.Combine(builder.Environment.ContentRootPath, "keys");
+KeyStore.KeyPair keys;
+try
+{
+    keys = KeyStore.LoadOrCreate(passphrase, keyDir, kid: kid, rsaBits: rsaBits);
+}
+catch (Exception ex)
+{
+    builder.Logging.AddConsole();
+    var logger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("Startup");
+    logger.LogError(ex, "Error al generar/cargar llaves en {KeyDir}", keyDir);
+    throw;
+}
+
+// 4) Servicios de seguridad (no duplicar)
+builder.Services.AddSingleton<IJwtIssuer>(new RsaJwtIssuer(keys.PrivatePem, keyId: keys.Kid));
+builder.Services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
+builder.Services.AddHttpContextAccessor();
+
+// 5) Web API + Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// ? CORS debe ir aquí, ANTES del build
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-
 var app = builder.Build();
 
-// Middleware HTTP global
-app.UseSwagger();
-app.UseSwaggerUI(c =>
+// Mostrar detalles en desarrollo
+if (app.Environment.IsDevelopment())
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend Atacado API V1");
-    c.RoutePrefix = "swagger";
-});
+    app.UseDeveloperExceptionPage();
+}
+
+app.UseSwagger();
+app.UseSwaggerUI(); // por defecto: /swagger y busca /swagger/v1/swagger.json
 
 app.UseHttpsRedirection();
-
-// ? Aplica CORS antes de Authorization
-app.UseCors("AllowAll");
-
-app.UseAuthorization();
-
 app.MapControllers();
-app.MapGet("/", () => "? API Backend Atacado en línea");
+app.MapGet("/", () => "Auth API OK");
 
 app.Run();

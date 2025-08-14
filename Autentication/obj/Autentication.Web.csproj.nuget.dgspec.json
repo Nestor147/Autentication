@@ -56,6 +56,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "MyCompany.Security": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -181,6 +191,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj": {
+                "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj"
+              },
               "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
                 "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj"
               }

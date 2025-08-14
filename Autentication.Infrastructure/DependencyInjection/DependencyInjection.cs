@@ -1,9 +1,12 @@
-﻿using Autentication.Core.Interfaces.Core;
+﻿using Autentication.Application.Interfaces;
+using Autentication.Core.Interfaces.Core;
 using Autentication.Infrastructure.Context;
 using Autentication.Infrastructure.Context.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyCompany.Security.Jwt;
+using MyCompany.Security.Password;
 
 namespace Autentication.Infrastructure.DependencyInjection
 {
@@ -15,6 +18,10 @@ namespace Autentication.Infrastructure.DependencyInjection
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthService, AuthService>();
+            //services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
+            //services.AddSingleton<IJwtIssuer>(new RsaJwtIssuer(keys.PrivatePem, keyId: keys.Kid));
+            //services.AddHttpContextAccessor();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //services.AddScoped<IPaisRepository, PaisRepository>();
             return services;
