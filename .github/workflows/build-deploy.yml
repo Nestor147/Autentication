@@ -1,0 +1,43 @@
+name: Deploy to MonsterASP.NET via FTP
+
+on:
+  push:
+    branches:
+      - master 
+
+jobs:
+  build_and_deploy:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build and Publish Project
+        run: dotnet publish -c Release -o ./publish
+
+      - name: Deploy to MonsterASP.NET via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 
+        with:
+          server: site33967.siteasp.net          
+          username: site33967                  
+          password: ${{ secrets.MONSTERASP_FTP_PASSWORD }}  
+          port: 21                              
+          protocol: ftp                         
+          local-dir: ./publish/                  
+          server-dir: /wwwroot/                 
+          dangerous-clean-slate: false         
+
+      - name: ✅ Éxito
+        if: success()
+        run: echo "✅ Despliegue completado exitosamente."
+
+      - name: ❌ Error
+        if: failure()
+        run: echo "❌ Falló el build o el deploy. Revisa los logs en Actions."
