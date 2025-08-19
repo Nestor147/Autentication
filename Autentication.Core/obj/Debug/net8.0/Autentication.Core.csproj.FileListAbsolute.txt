@@ -11,3 +11,16 @@ C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.pdb
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\ref\Autentication.Core.dll
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.sourcelink.json
+D:\Atacado\Autentication\Autentication.Core\bin\Debug\net8.0\Autentication.Core.deps.json
+D:\Atacado\Autentication\Autentication.Core\bin\Debug\net8.0\Autentication.Core.dll
+D:\Atacado\Autentication\Autentication.Core\bin\Debug\net8.0\Autentication.Core.pdb
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.csproj.AssemblyReference.cache
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.AssemblyInfoInputs.cache
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.AssemblyInfo.cs
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.csproj.CoreCompileInputs.cache
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.sourcelink.json
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.dll
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\refint\Autentication.Core.dll
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\Autentication.Core.pdb
+D:\Atacado\Autentication\Autentication.Core\obj\Debug\net8.0\ref\Autentication.Core.dll

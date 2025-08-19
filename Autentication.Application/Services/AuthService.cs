@@ -23,9 +23,14 @@ public sealed class AuthService : IAuthService
         IJwtIssuer jwt,
         IPasswordHasher hasher,
         IConfiguration cfg,
-        IHttpContextAccessor http)
+        IHttpContextAccessor http
+        )
     {
-        _uow = uow; _jwt = jwt; _hasher = hasher; _cfg = cfg; _http = http;
+        _uow = uow;
+        _jwt = jwt;
+        _hasher = hasher;
+        _cfg = cfg;
+        _http = http;
     }
 
     public async Task<TokenPair> LoginAsync(LoginRequest req, CancellationToken ct)

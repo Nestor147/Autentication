@@ -4600,21 +4600,19 @@
   },
   "packageFolders": {
     "C:\\Users\\nesto\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
       "projectName": "Autentication.Infrastructure",
-      "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
+      "projectPath": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\nesto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Infrastructure\\obj\\",
+      "outputPath": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\nesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4634,11 +4632,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj": {
-              "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj"
+            "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj": {
+              "projectPath": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj"
             },
-            "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
-              "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj"
+            "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
+              "projectPath": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj"
             }
           }
         }
@@ -4653,7 +4651,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -4696,7 +4694,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
