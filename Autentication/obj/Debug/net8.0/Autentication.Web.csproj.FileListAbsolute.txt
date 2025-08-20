@@ -126,7 +126,6 @@ D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Extensions.Log
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Identity.Abstractions.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -138,7 +137,6 @@ D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.IdentityModel.
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\MyCompany.Security.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

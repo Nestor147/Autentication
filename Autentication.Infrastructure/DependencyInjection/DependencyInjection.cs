@@ -5,8 +5,7 @@ using Autentication.Infrastructure.Context.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MyCompany.Security.Jwt;
-using MyCompany.Security.Password;
+
 
 namespace Autentication.Infrastructure.DependencyInjection
 {

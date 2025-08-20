@@ -3,24 +3,96 @@
   "WorkspaceRootPath": "D:\\Atacado\\Autentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\password\\bcryptpasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\password\\bcryptpasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\jwt\\rsajwtissuer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\jwt\\rsajwtissuer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\jwt\\ijwtissuer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\jwt\\ijwtissuer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\jwt\\tokendescriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\jwt\\tokendescriptor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\password\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\password\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\autentication.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\autentication.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\jwt\\jwtauthextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\jwt\\jwtauthextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\security\\refreshtokenhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\security\\refreshtokenhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\denylist\\ijtidenylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\denylist\\ijtidenylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\usuariosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\usuariosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\tokenrevocado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\tokenrevocado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\intentofallidologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\intentofallidologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\dispositivoconocido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\dispositivoconocido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\auditorialogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\auditorialogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\aplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\aplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,40 +155,20 @@
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\refreshtokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\aplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\aplicacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\auditorialoginconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\auditorialoginconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\auditorialogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\auditorialogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\dispositivoconocidoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\dispositivoconocidoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\dispositivoconocido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\dispositivoconocido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\tokenrevocadoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\tokenrevocadoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\tokenrevocado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\tokenrevocado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\intentofallidologinconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\intentofallidologinconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\intentofallidologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\intentofallidologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\usuariosistemaconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,28 +179,12 @@
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\usuariosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\usuariosistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\rolusuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\rolusuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\rolconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\mapping\\autorizacion\\rolconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\autorizacion\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\autorizacion\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\mapping\\autorizacion\\aplicacionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,8 +222,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 36,
+          "SelectedChildIndex": 22,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Password\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Password\\IPasswordHasher.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Password\\IPasswordHasher.cs",
+              "RelativeToolTip": "Autentication.Application\\Password\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:25:34.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BCryptPasswordHasher.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Password\\BCryptPasswordHasher.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Password\\BCryptPasswordHasher.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Password\\BCryptPasswordHasher.cs*",
+              "RelativeToolTip": "Autentication.Application\\Password\\BCryptPasswordHasher.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:25:12.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Autentication.Application",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
+              "RelativeDocumentMoniker": "Autentication.Application\\Autentication.Application.csproj",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj*",
+              "RelativeToolTip": "Autentication.Application\\Autentication.Application.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-20T02:24:40.666Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -201,12 +276,90 @@
               "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TokenDescriptor.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\TokenDescriptor.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Jwt\\TokenDescriptor.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\TokenDescriptor.cs",
+              "RelativeToolTip": "Autentication.Application\\Jwt\\TokenDescriptor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:24:25.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RsaJwtIssuer.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\RsaJwtIssuer.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Jwt\\RsaJwtIssuer.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\RsaJwtIssuer.cs",
+              "RelativeToolTip": "Autentication.Application\\Jwt\\RsaJwtIssuer.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAcwLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:24:02.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JwtAuthExtensions.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\JwtAuthExtensions.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Jwt\\JwtAuthExtensions.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Jwt\\JwtAuthExtensions.cs",
+              "RelativeToolTip": "Autentication.Application\\Jwt\\JwtAuthExtensions.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwGUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:22:13.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RefreshTokenHasher.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Security\\RefreshTokenHasher.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Security\\RefreshTokenHasher.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Security\\RefreshTokenHasher.cs",
+              "RelativeToolTip": "Autentication.Application\\Security\\RefreshTokenHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:21:13.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IJwtIssuer.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\Jwt\\IJwtIssuer.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Interfaces\\Jwt\\IJwtIssuer.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\Jwt\\IJwtIssuer.cs",
+              "RelativeToolTip": "Autentication.Application\\Interfaces\\Jwt\\IJwtIssuer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:21:01.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IJtiDenylist.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\Denylist\\IJtiDenylist.cs",
+              "RelativeDocumentMoniker": "Autentication.Application\\Interfaces\\Denylist\\IJtiDenylist.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\Denylist\\IJtiDenylist.cs",
+              "RelativeToolTip": "Autentication.Application\\Interfaces\\Denylist\\IJtiDenylist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T02:17:48.777Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "ChangePasswordRequest.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\ChangePasswordRequest.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\ChangePasswordRequest.cs",
@@ -214,11 +367,12 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\ChangePasswordRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:18:41.514Z"
+              "WhenOpened": "2025-08-14T18:18:41.514Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 23,
               "Title": "RegisterResponse.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\RegisterResponse.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\RegisterResponse.cs",
@@ -226,11 +380,12 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\RegisterResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:00:48.254Z"
+              "WhenOpened": "2025-08-14T18:00:48.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 24,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\RegisterRequest.cs",
@@ -238,11 +393,12 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:00:11.857Z"
+              "WhenOpened": "2025-08-14T18:00:11.857Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "PingController.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\PingController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\PingController.cs",
@@ -250,36 +406,38 @@
               "RelativeToolTip": "Autentication\\Controllers\\PingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:56:12.893Z"
+              "WhenOpened": "2025-08-14T16:56:12.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Program.cs",
               "RelativeDocumentMoniker": "Autentication\\Program.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Program.cs",
               "RelativeToolTip": "Autentication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwDoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:47:02.723Z"
+              "WhenOpened": "2025-08-14T16:47:02.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Autentication\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowC4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T16:35:31.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 33,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Autentication\\WeatherForecast.cs",
@@ -287,11 +445,12 @@
               "RelativeToolTip": "Autentication\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:19:13.446Z"
+              "WhenOpened": "2025-08-14T16:19:13.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 34,
               "Title": "KeyStore.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Security\\KeyStore.cs",
               "RelativeDocumentMoniker": "Autentication\\Security\\KeyStore.cs",
@@ -299,11 +458,12 @@
               "RelativeToolTip": "Autentication\\Security\\KeyStore.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAgwCcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:01:01.187Z"
+              "WhenOpened": "2025-08-14T16:01:01.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 32,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\WeatherForecastController.cs",
@@ -311,24 +471,25 @@
               "RelativeToolTip": "Autentication\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:39:50.924Z"
+              "WhenOpened": "2025-08-14T15:39:50.924Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Services\\AuthService.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
               "RelativeToolTip": "Autentication.Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAABUBAAAAAAAAAAAAwCgBAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwBIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T15:14:44.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 31,
               "Title": "RefreshTokenHasher.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Security\\RefreshTokenHasher.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Security\\RefreshTokenHasher.cs",
@@ -336,11 +497,12 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Security\\RefreshTokenHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:14:09.954Z"
+              "WhenOpened": "2025-08-14T15:14:09.954Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 22,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Interfaces\\IAuthService.cs",
@@ -353,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 28,
               "Title": "Authentication.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Authentication.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Authentication.cs",
@@ -361,11 +523,12 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\Authentication.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:11:31.059Z"
+              "WhenOpened": "2025-08-14T15:11:31.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 38,
               "Title": "AuditoriaLoginConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\AuditoriaLoginConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\AuditoriaLoginConfiguration.cs",
@@ -373,23 +536,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\AuditoriaLoginConfiguration.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAmwD0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:44:28.942Z"
+              "WhenOpened": "2025-08-14T14:44:28.942Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 17,
               "Title": "AuditoriaLogin.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\AuditoriaLogin.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\AuditoriaLogin.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\AuditoriaLogin.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\AuditoriaLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:44:10.359Z"
+              "WhenOpened": "2025-08-14T14:44:10.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 39,
               "Title": "DispositivoConocidoConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\DispositivoConocidoConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\DispositivoConocidoConfiguration.cs",
@@ -397,23 +562,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\DispositivoConocidoConfiguration.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAmwDwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:43:22.278Z"
+              "WhenOpened": "2025-08-14T14:43:22.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 16,
               "Title": "DispositivoConocido.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\DispositivoConocido.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\DispositivoConocido.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\DispositivoConocido.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\DispositivoConocido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:43:02.919Z"
+              "WhenOpened": "2025-08-14T14:43:02.919Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 40,
               "Title": "TokenRevocadoConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\TokenRevocadoConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\TokenRevocadoConfiguration.cs",
@@ -421,23 +588,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\TokenRevocadoConfiguration.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAmwEAAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:41:46.04Z"
+              "WhenOpened": "2025-08-14T14:41:46.04Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 11,
               "Title": "TokenRevocado.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\TokenRevocado.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\TokenRevocado.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\TokenRevocado.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\TokenRevocado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:41:27.676Z"
+              "WhenOpened": "2025-08-14T14:41:27.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 41,
               "Title": "IntentoFallidoLoginConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\IntentoFallidoLoginConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\IntentoFallidoLoginConfiguration.cs",
@@ -445,23 +614,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\IntentoFallidoLoginConfiguration.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAmwFAAAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:40:31.93Z"
+              "WhenOpened": "2025-08-14T14:40:31.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 15,
               "Title": "IntentoFallidoLogin.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\IntentoFallidoLogin.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\IntentoFallidoLogin.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\IntentoFallidoLogin.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\IntentoFallidoLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:40:01.03Z"
+              "WhenOpened": "2025-08-14T14:40:01.03Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 37,
               "Title": "RefreshTokenConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\RefreshTokenConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RefreshTokenConfiguration.cs",
@@ -469,23 +640,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RefreshTokenConfiguration.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAWwFEAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:38:09.598Z"
+              "WhenOpened": "2025-08-14T14:38:09.598Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 14,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\RefreshToken.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\RefreshToken.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\RefreshToken.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\RefreshToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:37:48.742Z"
+              "WhenOpened": "2025-08-14T14:37:48.742Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 44,
               "Title": "RolUsuarioConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\RolUsuarioConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RolUsuarioConfiguration.cs",
@@ -493,23 +666,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RolUsuarioConfiguration.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAAwEQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:35:29.378Z"
+              "WhenOpened": "2025-08-14T14:35:29.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 12,
               "Title": "RolUsuario.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\RolUsuario.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\RolUsuario.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\RolUsuario.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\RolUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:35:07.342Z"
+              "WhenOpened": "2025-08-14T14:35:07.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "UsuarioSistemaConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\UsuarioSistemaConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\UsuarioSistemaConfiguration.cs",
@@ -517,23 +692,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\UsuarioSistemaConfiguration.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAwE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:34:20.88Z"
+              "WhenOpened": "2025-08-14T14:34:20.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 10,
               "Title": "UsuarioSistema.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:33:58.463Z"
+              "WhenOpened": "2025-08-14T14:33:58.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 45,
               "Title": "RolConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\RolConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RolConfiguration.cs",
@@ -541,23 +718,25 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RolConfiguration.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwEEAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:31:47.552Z"
+              "WhenOpened": "2025-08-14T14:31:47.552Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 13,
               "Title": "Rol.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\Rol.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\Rol.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\Rol.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\Rol.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:31:25.226Z"
+              "WhenOpened": "2025-08-14T14:31:25.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 46,
               "Title": "AplicacionConfiguration.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Mapping\\Autorizacion\\AplicacionConfiguration.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Mapping\\Autorizacion\\AplicacionConfiguration.cs",
@@ -565,11 +744,12 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\AplicacionConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:29:29.846Z"
+              "WhenOpened": "2025-08-14T14:29:29.846Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 47,
               "Title": "AuditFieldsQueryFilter.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\QueryFilters\\AuditFieldsQueryFilter.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\QueryFilters\\AuditFieldsQueryFilter.cs",
@@ -577,23 +757,25 @@
               "RelativeToolTip": "Autentication.Core\\QueryFilters\\AuditFieldsQueryFilter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:27:08.872Z"
+              "WhenOpened": "2025-08-14T14:27:08.872Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "Aplicacion.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\Aplicacion.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\Aplicacion.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\Aplicacion.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\Aplicacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:25:54.208Z"
+              "WhenOpened": "2025-08-14T14:25:54.208Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\appsettings.json",
               "RelativeDocumentMoniker": "Autentication\\appsettings.json",
@@ -606,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 30,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
@@ -614,11 +796,12 @@
               "RelativeToolTip": "Autentication.Infrastructure\\DependencyInjection\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T20:16:33.496Z"
+              "WhenOpened": "2025-08-12T20:16:33.496Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 48,
               "Title": "Autentication.Infrastructure.csproj",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
@@ -626,11 +809,12 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Autentication.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-12T20:14:19.854Z"
+              "WhenOpened": "2025-08-12T20:14:19.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 50,
               "Title": "Autentication.Web.csproj",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
               "RelativeDocumentMoniker": "Autentication\\Autentication.Web.csproj",
@@ -638,11 +822,12 @@
               "RelativeToolTip": "Autentication\\Autentication.Web.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-12T19:55:13.064Z"
+              "WhenOpened": "2025-08-12T19:55:13.064Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 29,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Context\\AppDbContext.cs",
@@ -650,35 +835,38 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Context\\AppDbContext.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAADwvyQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T20:05:34.143Z"
+              "WhenOpened": "2025-08-12T20:05:34.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Context\\Core\\UnitOfWork.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\UnitOfWork.cs",
               "RelativeToolTip": "Autentication.Infrastructure\\Context\\Core\\UnitOfWork.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAFoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAABQwFoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T20:04:41.651Z"
+              "WhenOpened": "2025-08-12T20:04:41.651Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 35,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
               "RelativeToolTip": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAI4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAEBVwI4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T20:03:35.067Z"
+              "WhenOpened": "2025-08-12T20:03:35.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 49,
               "Title": "ResponseApi.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ResponseApi.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Core\\ResponseApi.cs",
@@ -686,23 +874,25 @@
               "RelativeToolTip": "Autentication.Core\\Entities\\Core\\ResponseApi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T20:00:15.984Z"
+              "WhenOpened": "2025-08-12T20:00:15.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 36,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Interfaces\\Core\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Interfaces\\Core\\IGenericRepository.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Interfaces\\Core\\IGenericRepository.cs",
               "RelativeToolTip": "Autentication.Core\\Interfaces\\Core\\IGenericRepository.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwCYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAzwCYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T19:59:09.474Z"
+              "WhenOpened": "2025-08-12T19:59:09.474Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Class1.cs",
@@ -710,11 +900,12 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T19:54:58.271Z"
+              "WhenOpened": "2025-08-12T19:54:58.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 51,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Class1.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Class1.cs",
@@ -722,11 +913,12 @@
               "RelativeToolTip": "Autentication.Core\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T19:54:18.951Z"
+              "WhenOpened": "2025-08-12T19:54:18.951Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 52,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Class1.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Class1.cs",
@@ -734,7 +926,8 @@
               "RelativeToolTip": "Autentication.Application\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T19:54:05.164Z"
+              "WhenOpened": "2025-08-12T19:54:05.164Z",
+              "EditorCaption": ""
             }
           ]
         },

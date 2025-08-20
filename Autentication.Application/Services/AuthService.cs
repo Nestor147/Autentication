@@ -1,13 +1,15 @@
 ﻿using Autentication.Application.DTOs;
 using Autentication.Application.Interfaces;
+using Autentication.Application.Interfaces.Jwt;
+using Autentication.Application.Jwt;
+using Autentication.Application.Password;
 using Autentication.Core.Entities.Autorizacion;
 using Autentication.Core.Interfaces.Core;
 using Autentication.Infrastructure.Security;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using MyCompany.Security.Jwt;
-using MyCompany.Security.Password;
+
 using System.Security.Cryptography;
 
 public sealed class AuthService : IAuthService
@@ -39,8 +41,17 @@ public sealed class AuthService : IAuthService
         var user = await _uow.UsuarioSistemaRepository
             .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
 
-        if (user is null) { await RegistrarIntento(req.Username, null, false, "Usuario no existe", ct); throw new UnauthorizedAccessException(); }
-        if (user.Locked) { await RegistrarIntento(req.Username, user.Id, false, "Usuario bloqueado", ct); throw new UnauthorizedAccessException(); }
+        if (user is null)
+        {
+            await RegistrarIntento(req.Username, null, false, "Usuario no existe", ct);
+            throw new UnauthorizedAccessException();
+        }
+
+        if (user.Locked)
+        {
+            await RegistrarIntento(req.Username, user.Id, false, "Usuario bloqueado", ct);
+            throw new UnauthorizedAccessException();
+        }
 
         // 2) Password
         if (!_hasher.Verify(user.Password, req.Password))
@@ -58,18 +69,29 @@ public sealed class AuthService : IAuthService
                       (ru, r) => r.Nombre)
                 .ToListAsync(ct);
 
-        // 4) Access JWT
+        // 4) Access JWT con claims adicionales
         var jti = Guid.NewGuid().ToString("N");
+
+        var extraClaims = new Dictionary<string, object>
+        {
+            ["name"] = user.Username,                         // estándar OIDC
+            ["preferred_username"] = user.Username,           // opcional, algunos front usan este
+            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,     // por si necesitas enlazar con otra tabla
+            ["mfa"] = false,                                  // ejemplo de claim MFA
+            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+        };
+
         var access = _jwt.CreateAccessToken(new TokenDescriptor(
-            Subject: user.Id.ToString(),
-            Roles: roleNames,
+            Subject: user.Id.ToString(),    // "sub"
+            Roles: roleNames,               // roles
             Issuer: _cfg["Auth:Issuer"]!,
             Audience: _cfg["Auth:Audience"]!,
             Jti: jti,
-            Lifetime: TimeSpan.FromMinutes(10)
+            Lifetime: TimeSpan.FromMinutes(10),
+            Claims: extraClaims             // ⬅️ IMPORTANTE
         ));
 
-        // 5) Refresh opaco (guardar HASH)
+        // 5) Refresh opaco (guardar HASH en BD)
         var opaque = RefreshTokenHasher.GenerateOpaque();
         var hash = RefreshTokenHasher.Hash(opaque);
 
@@ -88,6 +110,7 @@ public sealed class AuthService : IAuthService
 
         return new TokenPair(access, opaque);
     }
+
 
     public async Task<TokenPair> RefreshAsync(RefreshRequest req, CancellationToken ct)
     {

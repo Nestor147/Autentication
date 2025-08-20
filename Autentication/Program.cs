@@ -1,7 +1,9 @@
+using Autentication.Application.Interfaces.Jwt;
+using Autentication.Application.Jwt;
+using Autentication.Application.Password;
 using Autentication.Infrastructure.DependencyInjection;
 using Autentication.Web.Security;
-using MyCompany.Security.Jwt;
-using MyCompany.Security.Password;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
