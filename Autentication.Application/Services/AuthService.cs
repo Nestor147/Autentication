@@ -144,7 +144,8 @@ public sealed class AuthService : IAuthService
             Issuer: _cfg["Auth:Issuer"]!,
             Audience: _cfg["Auth:Audience"]!,
             Jti: Guid.NewGuid().ToString("N"),
-            Lifetime: TimeSpan.FromMinutes(10)
+            //Lifetime: TimeSpan.FromMinutes(10)
+            Lifetime: TimeSpan.FromDays(15)
         ));
 
         var newOpaque = RefreshTokenHasher.GenerateOpaque();

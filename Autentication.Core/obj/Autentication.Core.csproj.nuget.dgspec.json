@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {}
+    "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {}
   },
   "projects": {
-    "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
+    "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
+        "projectUniqueName": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
         "projectName": "Autentication.Core",
-        "projectPath": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
+        "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
         "packagesPath": "C:\\Users\\nesto\\.nuget\\packages\\",
-        "outputPath": "D:\\Atacado\\Autentication\\Autentication.Core\\obj\\",
+        "outputPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\nesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,7 +47,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -97,8 +97,6 @@ C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\obj\Debug
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\obj\Debug\net8.0\Autentication.Web.sourcelink.json
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\bin\Debug\net8.0\Microsoft.Identity.Abstractions.dll
-C:\Users\nesto\OneDrive\Escritorio\Atacado\Autentication\Autentication\bin\Debug\net8.0\MyCompany.Security.dll
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\appsettings.Development.json
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\appsettings.json
 D:\Atacado\Autentication\Autentication\bin\Debug\net8.0\Autentication.Web.staticwebassets.endpoints.json
