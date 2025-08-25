@@ -93,6 +93,32 @@
   },
   {
     "ContainingType": "Autentication.Web.Controllers.AuthController",
+    "Method": "RegisterBuyer",
+    "RelativePath": "api/Auth/register-buyer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Autentication.Application.DTOs.RegisterBuyerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Autentication.Application.DTOs.TokenPair",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Autentication.Web.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/sessions",
     "HttpMethod": "POST",

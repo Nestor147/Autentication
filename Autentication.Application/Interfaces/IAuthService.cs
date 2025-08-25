@@ -13,6 +13,7 @@ namespace Autentication.Application.Interfaces
         Task<TokenPair> RefreshAsync(RefreshRequest req, CancellationToken ct);
         Task LogoutAsync(RefreshRequest req, CancellationToken ct);
         Task<RegisterResponse> RegisterAsync(RegisterRequest req, CancellationToken ct);
+        Task<TokenPair> RegisterBuyerAtacadoAsync(RegisterBuyerRequest req, CancellationToken ct);
         Task ChangePasswordAsync(ChangePasswordRequest req, CancellationToken ct);
 
         string GetJwks(); // público
