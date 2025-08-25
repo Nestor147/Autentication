@@ -327,6 +327,122 @@ public sealed class AuthService : IAuthService
         await _uow.SaveChangesAsync();
     }
 
+    public async Task<TokenPair> RegisterBuyerAtacadoAsync(RegisterBuyerRequest req, CancellationToken ct)
+    {
+        // 0) Validaciones básicas
+        if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+            throw new InvalidOperationException("Username y Password son requeridos.");
 
+        // 1) Resolver aplicación ATACADO (lecturas FUERA de transacción y sin tracking)
+        var aplicacion = await _uow.AplicacionRepository.Query()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
+            ?? throw new InvalidOperationException("La aplicación ATACADO no existe o está inactiva.");
+
+        // 2) Resolver rol COMPRADOR en esa app (lectura FUERA de transacción y sin tracking)
+        var rol = await _uow.RolRepository.Query()
+            .AsNoTracking()
+            .FirstOrDefaultAsync(r => r.IdAplicacion == aplicacion.Id
+                                   && r.EstadoRegistro == 1
+                                   && r.Nombre.ToUpper() == "COMPRADOR", ct)
+            ?? throw new InvalidOperationException("No existe el rol COMPRADOR para ATACADO.");
+
+        // 3) Validar duplicados (igual que RegisterAsync)
+        var exists = await _uow.UsuarioSistemaRepository
+            .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
+        if (exists is not null)
+            throw new InvalidOperationException("El username ya está registrado.");
+
+        // 4) Hash de password (igual que RegisterAsync)
+        var hash = _hasher.Hash(req.Password);
+
+        // 5) Construir entidad (igual que RegisterAsync)
+        var user = new UsuarioSistema
+        {
+            IdUsuarioGeneral = 0,
+            Username = req.Username.Trim(),
+            Password = hash,
+            UltimoCambio = DateTime.UtcNow,
+            Locked = false,
+            NuevoUsuario = false,
+            LoginPerpetuo = true,
+            LoginClave = true,
+            EstadoRegistro = 1
+        };
+
+        // 6) Transacción SOLO para escrituras (igual que RegisterAsync)
+        await _uow.BeginTransactionAsync();
+        try
+        {
+            // Inserta usuario
+            await _uow.UsuarioSistemaRepository.InsertAsync(user, "CREATE USER");
+
+            // Si el Insert no setea Id, refrescar por username
+            if (user.Id <= 0)
+            {
+                var again = await _uow.UsuarioSistemaRepository
+                    .FirstOrDefaultAsync(u => u.Username == user.Username, ct);
+                user.Id = again!.Id;
+            }
+
+            // Asignar rol COMPRADOR
+            await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+            {
+                IdRol = rol.Id,
+                IdUsuarioSistema = user.Id,
+                EstadoRegistro = 1
+            }, "ASSIGN ROLE");
+
+            await _uow.SaveChangesAsync();
+            await _uow.CommitTransactionAsync();
+        }
+        catch
+        {
+            await _uow.RollbackTransactionAsync();
+            throw;
+        }
+
+        // 7) Emitir tokens (access + refresh) como en Login/Refresh
+        var jti = Guid.NewGuid().ToString("N");
+        var rolesDelUsuario = new List<string> { rol.Nombre };
+
+        var extraClaims = new Dictionary<string, object>
+        {
+            ["name"] = user.Username,
+            ["preferred_username"] = user.Username,
+            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,
+            ["mfa"] = false,
+            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+        };
+
+        var access = _jwt.CreateAccessToken(new TokenDescriptor(
+            Subject: user.Id.ToString(),
+            Roles: rolesDelUsuario,
+            Issuer: _cfg["Auth:Issuer"]!,
+            Audience: _cfg["Auth:Audience"]!,
+            Jti: jti,
+            Lifetime: TimeSpan.FromMinutes(10),
+            Claims: extraClaims
+        ));
+
+        var opaque = RefreshTokenHasher.GenerateOpaque();
+        var rHash = RefreshTokenHasher.Hash(opaque);
+
+        await _uow.RefreshTokenRepository.InsertAsync(new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            IdUsuarioSistema = user.Id,
+            TokenHash = rHash,
+            FechaExpiracion = DateTime.UtcNow.AddDays(15),
+            IP = GetClientIp(),
+            UserAgent = GetUserAgent()
+        });
+        await _uow.SaveChangesAsync();
+
+        // Auditoría mínima
+        await RegistrarIntento(user.Username, user.Id, true, "Usuario comprador ATACADO registrado", ct);
+
+        return new TokenPair(access, opaque);
+    }
 
 }

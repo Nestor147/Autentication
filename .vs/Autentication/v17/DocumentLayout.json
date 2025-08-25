@@ -234,8 +234,7 @@
               "RelativeToolTip": "Autentication.Application\\Password\\IPasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:25:34.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:25:34.835Z"
             },
             {
               "$type": "Document",
@@ -247,8 +246,7 @@
               "RelativeToolTip": "Autentication.Application\\Password\\BCryptPasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:25:12.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:25:12.428Z"
             },
             {
               "$type": "Document",
@@ -284,8 +282,7 @@
               "RelativeToolTip": "Autentication.Application\\Jwt\\RsaJwtIssuer.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAIwLsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:24:02.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:24:02.072Z"
             },
             {
               "$type": "Document",
@@ -297,8 +294,7 @@
               "RelativeToolTip": "Autentication.Application\\Jwt\\JwtAuthExtensions.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAwwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:22:13.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:22:13.01Z"
             },
             {
               "$type": "Document",
@@ -310,8 +306,7 @@
               "RelativeToolTip": "Autentication.Application\\Security\\RefreshTokenHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:21:13.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:21:13.85Z"
             },
             {
               "$type": "Document",
@@ -323,8 +318,7 @@
               "RelativeToolTip": "Autentication.Application\\Interfaces\\Jwt\\IJwtIssuer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:21:01.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:21:01.487Z"
             },
             {
               "$type": "Document",
@@ -336,8 +330,7 @@
               "RelativeToolTip": "Autentication.Application\\Interfaces\\Denylist\\IJtiDenylist.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:17:48.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T02:17:48.777Z"
             },
             {
               "$type": "Document",
@@ -349,8 +342,7 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\ChangePasswordRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:18:41.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T18:18:41.514Z"
             },
             {
               "$type": "Document",
@@ -362,8 +354,7 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\RegisterResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:00:48.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T18:00:48.254Z"
             },
             {
               "$type": "Document",
@@ -375,8 +366,7 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T18:00:11.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T18:00:11.857Z"
             },
             {
               "$type": "Document",
@@ -388,8 +378,7 @@
               "RelativeToolTip": "Autentication\\Controllers\\PingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:56:12.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T16:56:12.893Z"
             },
             {
               "$type": "Document",
@@ -401,8 +390,7 @@
               "RelativeToolTip": "Autentication\\Program.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAuwDwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T16:47:02.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T16:47:02.723Z"
             },
             {
               "$type": "Document",
@@ -463,8 +451,7 @@
               "RelativeToolTip": "Autentication.Application\\Services\\AuthService.cs",
               "ViewState": "AgIAAN4AAAAAAAAAAAAcwPEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:14:44.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T15:14:44.977Z"
             },
             {
               "$type": "Document",
@@ -488,8 +475,7 @@
               "RelativeToolTip": "Autentication.Application\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:12:16.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T15:12:16.295Z"
             },
             {
               "$type": "Document",
@@ -501,8 +487,7 @@
               "RelativeToolTip": "Autentication.Application\\DTOs\\Authentication.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T15:11:31.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T15:11:31.059Z"
             },
             {
               "$type": "Document",
@@ -658,8 +643,7 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\UsuarioSistemaConfiguration.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAewE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:34:20.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T14:34:20.88Z"
             },
             {
               "$type": "Document",
@@ -669,7 +653,7 @@
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
               "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Autorizacion\\UsuarioSistema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T14:33:58.463Z",
               "EditorCaption": ""
@@ -684,8 +668,7 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\RolConfiguration.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAewEEAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:31:47.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T14:31:47.552Z"
             },
             {
               "$type": "Document",
@@ -709,8 +692,7 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Mapping\\Autorizacion\\AplicacionConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T14:29:29.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T14:29:29.846Z"
             },
             {
               "$type": "Document",
@@ -746,8 +728,7 @@
               "RelativeToolTip": "Autentication\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-12T20:17:28.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T20:17:28.204Z"
             },
             {
               "$type": "Document",

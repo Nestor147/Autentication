@@ -51,6 +51,28 @@ public class AuthController : ControllerBase
         catch (Exception ex) { return StatusCode(500, new { message = "Register error", detail = ex.Message }); }
     }
 
+    [HttpPost("register-buyer")]
+    public async Task<ActionResult<TokenPair>> RegisterBuyer([FromBody] RegisterBuyerRequest request, CancellationToken ct)
+    {
+        try
+        {
+            var tokens = await _svc.RegisterBuyerAtacadoAsync(request, ct);
+            return Ok(tokens);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Error interno al registrar comprador.", detail = ex.Message });
+        }
+    }
+
     [HttpPost("password")]
     [Authorize] // requiere access token
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest req, CancellationToken ct)
