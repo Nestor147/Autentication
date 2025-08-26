@@ -61,24 +61,30 @@ public sealed class AuthService : IAuthService
         }
 
         // 3) Roles  (JOIN: RolesUsuarios -> Rol)
-        var roleNames =
-            await _uow.RolUsuarioRepository.Query()
-                .Where(ru => ru.IdUsuarioSistema == user.Id && ru.EstadoRegistro == 1)
-                .Join(_uow.RolRepository.Query().Where(r => r.EstadoRegistro == 1),
-                      ru => ru.IdRol, r => r.Id,
-                      (ru, r) => r.Nombre)
-                .ToListAsync(ct);
 
+        var appsWithRoles = await GetUserAppRolesAsync(user.Id, ct);
+
+        // Si quieres también la lista plana de roles (toda app) que ya usas:
+        var roleNames = appsWithRoles.SelectMany(a => a.Roles).Distinct().ToList();
+
+        // Opcional: claims estructurados por app para el frontend
+        var claimAppRoles = appsWithRoles.Select(a => new {
+            id = a.IdAplicacion,
+            sigla = a.Sigla,
+            roles = a.Roles
+        }).ToList();
         // 4) Access JWT con claims adicionales
         var jti = Guid.NewGuid().ToString("N");
 
         var extraClaims = new Dictionary<string, object>
         {
-            ["name"] = user.Username,                         // estándar OIDC
-            ["preferred_username"] = user.Username,           // opcional, algunos front usan este
-            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,     // por si necesitas enlazar con otra tabla
-            ["mfa"] = false,                                  // ejemplo de claim MFA
-            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+            ["name"] = user.Username,
+            ["preferred_username"] = user.Username,
+            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,
+            ["mfa"] = false,
+            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            // 👇 Lo importante para tu caso:
+            ["app_roles"] = claimAppRoles   // [{ id, sigla, roles: [...] }, ...]
         };
 
         var access = _jwt.CreateAccessToken(new TokenDescriptor(
@@ -444,5 +450,41 @@ public sealed class AuthService : IAuthService
 
         return new TokenPair(access, opaque);
     }
+
+    private async Task<List<AppRolesDto>> GetUserAppRolesAsync(int userId, CancellationToken ct)
+    {
+        // 1) Consulta PLANA traducible 100% a SQL
+        var rows = await (
+            from ru in _uow.RolUsuarioRepository.Query().AsNoTracking()
+            where ru.IdUsuarioSistema == userId && ru.EstadoRegistro == 1
+            join r in _uow.RolRepository.Query().AsNoTracking().Where(x => x.EstadoRegistro == 1)
+                on ru.IdRol equals r.Id
+            join a in _uow.AplicacionRepository.Query().AsNoTracking().Where(x => x.EstadoRegistro == 1)
+                on r.IdAplicacion equals a.Id
+            select new
+            {
+                a.Id,
+                a.Sigla,
+                a.Descripcion,
+                Rol = r.Nombre
+            }
+        ).ToListAsync(ct); // ⬅️ materializamos aquí
+
+        // 2) Agrupamos en memoria sin problemas de traducción
+        var result = rows
+            .GroupBy(x => new { x.Id, x.Sigla, x.Descripcion })
+            .Select(g => new AppRolesDto(
+                g.Key.Id,
+                g.Key.Sigla,
+                g.Key.Descripcion,
+                g.Select(x => x.Rol).Distinct().OrderBy(n => n).ToList()
+            ))
+            .OrderBy(x => x.Sigla)
+            .ToList();
+
+        return result;
+    }
+
+
 
 }
