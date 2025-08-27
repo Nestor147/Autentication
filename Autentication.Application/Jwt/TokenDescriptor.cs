@@ -1,12 +1,16 @@
-﻿namespace Autentication.Application.Jwt
+﻿using System.Security.Claims;
+
+namespace Autentication.Application.Jwt
 {
     public sealed record TokenDescriptor(
-        string Subject,                 // sub (UserId)
-        IEnumerable<string> Roles,      // roles (array)
-        string Issuer,                  // iss
-        string Audience,                // aud
-        string Jti,                     // jti
-        TimeSpan Lifetime,              // exp (ahora + Lifetime)
-        IDictionary<string, object>? Claims = null  // 👈 NUEVO: claims extra (name, mfa, etc.)
+        string Subject,
+        IEnumerable<string>? Roles,
+        string Issuer,
+        string Audience,
+        string Jti,
+        TimeSpan Lifetime,
+        IDictionary<string, object>? Claims = null,
+        IEnumerable<Claim>? ExtraClaims = null // 👈 importante
     );
+
 }

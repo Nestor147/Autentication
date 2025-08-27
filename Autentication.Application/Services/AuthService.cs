@@ -9,8 +9,10 @@ using Autentication.Infrastructure.Security;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text.Json;
 
 public sealed class AuthService : IAuthService
 {
@@ -62,39 +64,35 @@ public sealed class AuthService : IAuthService
 
         // 3) Roles  (JOIN: RolesUsuarios -> Rol)
 
+        // 3) Roles  (JOIN: RolesUsuarios -> Rol)
         var appsWithRoles = await GetUserAppRolesAsync(user.Id, ct);
-
-        // Si quieres también la lista plana de roles (toda app) que ya usas:
         var roleNames = appsWithRoles.SelectMany(a => a.Roles).Distinct().ToList();
 
-        // Opcional: claims estructurados por app para el frontend
-        var claimAppRoles = appsWithRoles.Select(a => new {
-            id = a.IdAplicacion,
-            sigla = a.Sigla,
-            roles = a.Roles
-        }).ToList();
         // 4) Access JWT con claims adicionales
         var jti = Guid.NewGuid().ToString("N");
 
-        var extraClaims = new Dictionary<string, object>
-        {
-            ["name"] = user.Username,
-            ["preferred_username"] = user.Username,
-            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,
-            ["mfa"] = false,
-            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
-            // 👇 Lo importante para tu caso:
-            ["app_roles"] = claimAppRoles   // [{ id, sigla, roles: [...] }, ...]
-        };
+        // 🔁 Construye claims correctos (incluye app_roles/apps como JSON)
+        // 🔁 Construye claims correctos (incluye app_roles/apps como JSON)
+        var claims = await BuildAccessClaimsAsync(user, ct);
+
+        // agrega roles planos (ClaimTypes.Role) y también el claim "roles" (JSON) para el front
+        foreach (var r in roleNames)
+            claims.Add(new Claim(ClaimTypes.Role, r));
+
+        claims.Add(new Claim("roles",
+            JsonSerializer.Serialize(roleNames),
+            Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.Json));
+
 
         var access = _jwt.CreateAccessToken(new TokenDescriptor(
-            Subject: user.Id.ToString(),    // "sub"
-            Roles: roleNames,               // roles
+            Subject: user.Id.ToString(),
+            Roles: null, // <- setea null si vas a pasar Claims manuales
             Issuer: _cfg["Auth:Issuer"]!,
             Audience: _cfg["Auth:Audience"]!,
             Jti: jti,
             Lifetime: TimeSpan.FromMinutes(10),
-            Claims: extraClaims             // ⬅️ IMPORTANTE
+            Claims: null,             // <- no uses el diccionario para objetos
+            ExtraClaims: claims       // <- pasa la List<Claim>
         ));
 
         // 5) Refresh opaco (guardar HASH en BD)
@@ -131,28 +129,44 @@ public sealed class AuthService : IAuthService
             .FirstOrDefaultAsync(u => u.Id == token.IdUsuarioSistema, ct);
 
         // Roles
-        var roleNames =
-            await _uow.RolUsuarioRepository.Query()
-                .Where(ru => ru.IdUsuarioSistema == user.Id && ru.EstadoRegistro == 1)
-                .Join(_uow.RolRepository.Query().Where(r => r.EstadoRegistro == 1),
-                      ru => ru.IdRol, r => r.Id,
-                      (ru, r) => r.Nombre)
-                .ToListAsync(ct);
+        // Roles planos
+        var roleNames = await _uow.RolUsuarioRepository.Query()
+            .Where(ru => ru.IdUsuarioSistema == user.Id && ru.EstadoRegistro == 1)
+            .Join(_uow.RolRepository.Query().Where(r => r.EstadoRegistro == 1),
+                  ru => ru.IdRol, r => r.Id, (ru, r) => r.Nombre)
+            .Distinct()
+            .ToListAsync(ct);
 
-        // Rotar el refresh actual
+        // 🔁 Recalcula claims completos (incluye app_roles/apps como JSON)
+        var claims = await BuildAccessClaimsAsync(user, ct);
+        foreach (var r in roleNames)
+            claims.Add(new Claim(ClaimTypes.Role, r));
+
+        claims.Add(new Claim("roles",
+            JsonSerializer.Serialize(roleNames),
+            Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.Json));
+
+
         token.Usado = true;
         token.Revocado = true;
 
-        // Nuevo access + refresh
         var access = _jwt.CreateAccessToken(new TokenDescriptor(
             Subject: user.Id.ToString(),
-            Roles: roleNames,
+            Roles: null,
             Issuer: _cfg["Auth:Issuer"]!,
             Audience: _cfg["Auth:Audience"]!,
             Jti: Guid.NewGuid().ToString("N"),
-            //Lifetime: TimeSpan.FromMinutes(10)
-            Lifetime: TimeSpan.FromDays(15)
+            Lifetime: TimeSpan.FromDays(15),
+            Claims: null,
+            ExtraClaims: claims
         ));
+
+
+        // Rotar el refresh actual
+
+
+        // Nuevo access + refresh
+
 
         var newOpaque = RefreshTokenHasher.GenerateOpaque();
         var newHash = RefreshTokenHasher.Hash(newOpaque);
@@ -409,27 +423,30 @@ public sealed class AuthService : IAuthService
         }
 
         // 7) Emitir tokens (access + refresh) como en Login/Refresh
+        // 7) Emitir tokens (access + refresh)
         var jti = Guid.NewGuid().ToString("N");
         var rolesDelUsuario = new List<string> { rol.Nombre };
 
-        var extraClaims = new Dictionary<string, object>
-        {
-            ["name"] = user.Username,
-            ["preferred_username"] = user.Username,
-            ["idUsuarioGeneral"] = user.IdUsuarioGeneral,
-            ["mfa"] = false,
-            ["auth_time"] = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
-        };
+        // Reutiliza el mismo helper para armar claims completos
+        var claims = await BuildAccessClaimsAsync(user, ct);
+
+        // ClaimTypes.Role + claim "roles" (JSON) para el front
+        claims.Add(new Claim(ClaimTypes.Role, rol.Nombre));
+        claims.Add(new Claim("roles",
+            JsonSerializer.Serialize(rolesDelUsuario),
+            Microsoft.IdentityModel.JsonWebTokens.JsonClaimValueTypes.Json));
 
         var access = _jwt.CreateAccessToken(new TokenDescriptor(
             Subject: user.Id.ToString(),
-            Roles: rolesDelUsuario,
+            Roles: null,
             Issuer: _cfg["Auth:Issuer"]!,
             Audience: _cfg["Auth:Audience"]!,
             Jti: jti,
             Lifetime: TimeSpan.FromMinutes(10),
-            Claims: extraClaims
+            Claims: null,
+            ExtraClaims: claims
         ));
+
 
         var opaque = RefreshTokenHasher.GenerateOpaque();
         var rHash = RefreshTokenHasher.Hash(opaque);
@@ -485,6 +502,32 @@ public sealed class AuthService : IAuthService
         return result;
     }
 
+    private async Task<List<Claim>> BuildAccessClaimsAsync(UsuarioSistema user, CancellationToken ct)
+    {
+        // Obtén apps + roles por app (ya tienes este método)
+        var appsWithRoles = await GetUserAppRolesAsync(user.Id, ct);
 
+        var appRoles = appsWithRoles.Select(a => new {
+            id = a.IdAplicacion,
+            sigla = a.Sigla,
+            roles = a.Roles
+        }).ToList();
 
+        var appsMini = appsWithRoles.Select(a => new { id = a.IdAplicacion, sigla = a.Sigla }).ToList();
+
+        var claims = new List<Claim>
+    {
+        new Claim("name", user.Username),
+        new Claim("preferred_username", user.Username),
+        new Claim("idUsuarioGeneral", user.IdUsuarioGeneral.ToString()),
+        new Claim("mfa", "false"),
+        new Claim("auth_time", DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()),
+
+        // 👇 serializa como JSON y marca el tipo del claim
+        new Claim("app_roles", JsonSerializer.Serialize(appRoles), JsonClaimValueTypes.Json),
+        new Claim("apps", JsonSerializer.Serialize(appsMini), JsonClaimValueTypes.Json)
+    };
+
+        return claims;
+    }
 }
