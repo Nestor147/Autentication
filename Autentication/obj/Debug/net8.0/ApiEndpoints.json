@@ -29,6 +29,58 @@
   },
   {
     "ContainingType": "Autentication.Web.Controllers.AuthController",
+    "Method": "CreateAdmin",
+    "RelativePath": "api/Auth/admins",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Autentication.Application.DTOs.Atacado.CreateAdminRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Autentication.Application.DTOs.Atacado.CreateAdminResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Autentication.Web.Controllers.AuthController",
+    "Method": "CreateBuyer",
+    "RelativePath": "api/Auth/buyers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Autentication.Application.DTOs.Atacado.CreateBuyerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Autentication.Application.DTOs.Atacado.CreateBuyerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Autentication.Web.Controllers.AuthController",
     "Method": "Logout",
     "RelativePath": "api/Auth/logout",
     "HttpMethod": "POST",
@@ -108,6 +160,32 @@
     "ReturnTypes": [
       {
         "Type": "Autentication.Application.DTOs.TokenPair",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Autentication.Web.Controllers.AuthController",
+    "Method": "CreateSeller",
+    "RelativePath": "api/Auth/sellers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Autentication.Application.DTOs.Atacado.CreateSellerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Autentication.Application.DTOs.Atacado.CreateSellerResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",

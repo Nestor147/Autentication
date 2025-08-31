@@ -1,4 +1,5 @@
 ﻿using Autentication.Application.DTOs;
+using Autentication.Application.DTOs.Atacado;
 using Autentication.Application.Interfaces;
 using Autentication.Application.Interfaces.Jwt;
 using Autentication.Application.Jwt;
@@ -530,4 +531,279 @@ public sealed class AuthService : IAuthService
 
         return claims;
     }
+
+    public async Task<CreateSellerResponse> CreateSellerAsync(CreateSellerRequest req, CancellationToken ct)
+    {
+        // Basic input validation
+        if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+            throw new InvalidOperationException("Username and Password are required.");
+
+        try
+        {
+            // Resolve ATACADO application (read, no tracking)
+            var app = await _uow.AplicacionRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
+                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+
+            // Resolve VENDEDOR role for ATACADO (read, no tracking)
+            var role = await _uow.RolRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
+                                       && r.EstadoRegistro == 1
+                                       && r.Nombre.ToUpper() == "VENDEDOR", ct)
+                ?? throw new InvalidOperationException("Role VENDEDOR does not exist for ATACADO.");
+
+            // Check duplicates
+            var exists = await _uow.UsuarioSistemaRepository
+                .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
+            if (exists is not null)
+                throw new InvalidOperationException("The username is already registered.");
+
+            // Hash password
+            var hash = _hasher.Hash(req.Password);
+
+            // Build entity
+            var user = new UsuarioSistema
+            {
+                IdUsuarioGeneral = req.IdUsuarioGeneral ?? 0,
+                Username = req.Username.Trim(),
+                Password = hash,
+                UltimoCambio = DateTime.UtcNow,
+                Locked = false,
+                NuevoUsuario = false,
+                LoginPerpetuo = true,
+                LoginClave = true,
+                EstadoRegistro = 1
+            };
+
+            await _uow.BeginTransactionAsync();
+
+            try
+            {
+                // Insert user
+                await _uow.UsuarioSistemaRepository.InsertAsync(user, "CREATE SELLER USER");
+
+                // Ensure Id (if not set by repo)
+                if (user.Id <= 0)
+                {
+                    var again = await _uow.UsuarioSistemaRepository
+                        .FirstOrDefaultAsync(u => u.Username == user.Username, ct);
+                    user.Id = again!.Id;
+                }
+
+                // Assign VENDEDOR role
+                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                {
+                    IdRol = role.Id,
+                    IdUsuarioSistema = user.Id,
+                    EstadoRegistro = 1
+                }, "ASSIGN SELLER ROLE");
+
+                await _uow.SaveChangesAsync();
+                await _uow.CommitTransactionAsync();
+            }
+            catch
+            {
+                await _uow.RollbackTransactionAsync();
+                throw;
+            }
+
+            // Minimal audit
+            await RegistrarIntento(user.Username, user.Id, true, "Seller created (no tokens issued)", ct);
+
+            return new CreateSellerResponse
+            {
+                UserId = user.Id,
+                Username = user.Username,
+                RoleAssigned = "VENDEDOR"
+            };
+        }
+        catch
+        {
+            // Opcional: aquí podrías mapear a una excepción de dominio propia
+            throw;
+        }
+    }
+
+    public async Task<CreateBuyerResponse> CreateBuyerAsync(CreateBuyerRequest req, CancellationToken ct)
+    {
+        if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+            throw new InvalidOperationException("Username and Password are required.");
+
+        try
+        {
+            // 1) App ATACADO
+            var app = await _uow.AplicacionRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
+                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+
+            // 2) Rol COMPRADOR
+            var role = await _uow.RolRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
+                                       && r.EstadoRegistro == 1
+                                       && r.Nombre.ToUpper() == "COMPRADOR", ct)
+                ?? throw new InvalidOperationException("Role COMPRADOR does not exist for ATACADO.");
+
+            // 3) Duplicados (solo activos)
+            var exists = await _uow.UsuarioSistemaRepository
+                .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
+            if (exists is not null)
+                throw new InvalidOperationException("The username is already registered.");
+
+            // 4) Hash password
+            var hash = _hasher.Hash(req.Password);
+
+            // 5) Entidad
+            var user = new UsuarioSistema
+            {
+                IdUsuarioGeneral = req.IdUsuarioGeneral ?? 0,
+                Username = req.Username.Trim(),
+                Password = hash,
+                UltimoCambio = DateTime.UtcNow,
+                Locked = false,
+                NuevoUsuario = false,
+                LoginPerpetuo = true,
+                LoginClave = true,
+                EstadoRegistro = 1
+            };
+
+            // 6) Escrituras en transacción
+            await _uow.BeginTransactionAsync();
+            try
+            {
+                await _uow.UsuarioSistemaRepository.InsertAsync(user, "CREATE BUYER USER");
+
+                if (user.Id <= 0)
+                {
+                    var again = await _uow.UsuarioSistemaRepository
+                        .FirstOrDefaultAsync(u => u.Username == user.Username, ct);
+                    user.Id = again!.Id;
+                }
+
+                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                {
+                    IdRol = role.Id,
+                    IdUsuarioSistema = user.Id,
+                    EstadoRegistro = 1
+                }, "ASSIGN BUYER ROLE");
+
+                await _uow.SaveChangesAsync();
+                await _uow.CommitTransactionAsync();
+            }
+            catch
+            {
+                await _uow.RollbackTransactionAsync();
+                throw;
+            }
+
+            // Auditoría mínima
+            await RegistrarIntento(user.Username, user.Id, true, "Buyer created (no tokens issued)", ct);
+
+            return new CreateBuyerResponse
+            {
+                UserId = user.Id,
+                Username = user.Username,
+                RoleAssigned = "COMPRADOR"
+            };
+        }
+        catch
+        {
+            throw; // deja que el controller mapee a HTTP
+        }
+    }
+
+
+    public async Task<CreateAdminResponse> CreateAdminAsync(CreateAdminRequest req, CancellationToken ct)
+    {
+        if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+            throw new InvalidOperationException("Username and Password are required.");
+
+        try
+        {
+            // 1) App ATACADO
+            var app = await _uow.AplicacionRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
+                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+
+            // 2) Rol ADMINISTRADOR (soporta también "ADMIN")
+            var role = await _uow.RolRepository.Query()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
+                                       && r.EstadoRegistro == 1
+                                       && (r.Nombre.ToUpper() == "ADMINISTRADOR" || r.Nombre.ToUpper() == "ADMIN"), ct)
+                ?? throw new InvalidOperationException("Role ADMINISTRADOR/ADMIN does not exist for ATACADO.");
+
+            // 3) Duplicados (solo activos; ajusta si quieres bloquear también inactivos)
+            var exists = await _uow.UsuarioSistemaRepository
+                .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
+            if (exists is not null)
+                throw new InvalidOperationException("The username is already registered.");
+
+            // 4) Hash password
+            var hash = _hasher.Hash(req.Password);
+
+            // 5) Entidad
+            var user = new UsuarioSistema
+            {
+                IdUsuarioGeneral = req.IdUsuarioGeneral ?? 0,
+                Username = req.Username.Trim(),
+                Password = hash,
+                UltimoCambio = DateTime.UtcNow,
+                Locked = false,
+                NuevoUsuario = false,
+                LoginPerpetuo = true,
+                LoginClave = true,
+                EstadoRegistro = 1
+            };
+
+            // 6) Escrituras en transacción
+            await _uow.BeginTransactionAsync();
+            try
+            {
+                await _uow.UsuarioSistemaRepository.InsertAsync(user, "CREATE ADMIN USER");
+
+                if (user.Id <= 0)
+                {
+                    var again = await _uow.UsuarioSistemaRepository
+                        .FirstOrDefaultAsync(u => u.Username == user.Username, ct);
+                    user.Id = again!.Id;
+                }
+
+                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                {
+                    IdRol = role.Id,
+                    IdUsuarioSistema = user.Id,
+                    EstadoRegistro = 1
+                }, "ASSIGN ADMIN ROLE");
+
+                await _uow.SaveChangesAsync();
+                await _uow.CommitTransactionAsync();
+            }
+            catch
+            {
+                await _uow.RollbackTransactionAsync();
+                throw;
+            }
+
+            // Auditoría mínima
+            await RegistrarIntento(user.Username, user.Id, true, "Admin created (no tokens issued)", ct);
+
+            return new CreateAdminResponse
+            {
+                UserId = user.Id,
+                Username = user.Username,
+                RoleAssigned = role.Nombre.ToUpper()
+            };
+        }
+        catch
+        {
+            throw; // deja que el controller mapee a HTTP
+        }
+    }
+
+
 }

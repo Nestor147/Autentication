@@ -1,4 +1,5 @@
 ﻿using Autentication.Application.DTOs;
+using Autentication.Application.DTOs.Atacado;
 using Autentication.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -73,6 +74,31 @@ public class AuthController : ControllerBase
         }
     }
 
+    [HttpPost("sellers")]
+    public async Task<ActionResult<CreateSellerResponse>> CreateSeller([FromBody] CreateSellerRequest req, CancellationToken ct)
+    {
+        try
+        {
+            var result = await _svc.CreateSellerAsync(req, ct);
+            // 201 Created es adecuado al crear un recurso; puedes incluir Location si tienes un GET.
+            return Created($"/api/users/{result.UserId}", result);
+        }
+        catch (InvalidOperationException ex)
+        {
+            // Errores de negocio/validación
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            // No revelar detalles internos
+            return StatusCode(500, new { message = "Unexpected server error." });
+        }
+    }
+
     [HttpPost("password")]
     [Authorize] // requiere access token
     public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest req, CancellationToken ct)
@@ -80,6 +106,51 @@ public class AuthController : ControllerBase
         try { await _svc.ChangePasswordAsync(req, ct); return Ok(); }
         catch (UnauthorizedAccessException) { return Unauthorized(new { message = "Password actual incorrecta" }); }
         catch (Exception ex) { return StatusCode(500, new { message = "Password error", detail = ex.Message }); }
+    }
+
+
+    [HttpPost("buyers")]
+    public async Task<ActionResult<CreateBuyerResponse>> CreateBuyer([FromBody] CreateBuyerRequest req, CancellationToken ct)
+    {
+        try
+        {
+            var result = await _svc.CreateBuyerAsync(req, ct);
+            return Created($"/api/users/{result.UserId}", result);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
+        catch
+        {
+            return StatusCode(500, new { message = "Unexpected server error." });
+        }
+    }
+
+    [HttpPost("admins")]
+    public async Task<ActionResult<CreateAdminResponse>> CreateAdmin([FromBody] CreateAdminRequest req, CancellationToken ct)
+    {
+        try
+        {
+            var result = await _svc.CreateAdminAsync(req, ct);
+            return Created($"/api/users/{result.UserId}", result);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
+        catch
+        {
+            return StatusCode(500, new { message = "Unexpected server error." });
+        }
     }
 
     // JWKS en raíz (lo dejaste así, perfecto para descubrimiento OpenID)

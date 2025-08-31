@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "btPVQzVCksQ=",
+  "dgSpecHash": "4ZCQOdIb5nM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
+  "projectFilePath": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4My8JbaBFIg=",
+  "dgSpecHash": "+gwHki2833o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
+  "projectFilePath": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nesto\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.19\\microsoft.aspnetcore.authentication.jwtbearer.8.0.19.nupkg.sha512",
