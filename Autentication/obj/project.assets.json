@@ -3057,19 +3057,21 @@
   },
   "packageFolders": {
     "C:\\Users\\nesto\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
+      "projectUniqueName": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
       "projectName": "Autentication.Web",
-      "projectPath": "D:\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
+      "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
       "packagesPath": "C:\\Users\\nesto\\.nuget\\packages\\",
-      "outputPath": "D:\\Atacado\\Autentication\\Autentication\\obj\\",
+      "outputPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\nesto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3089,14 +3091,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj": {
-              "projectPath": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj"
+            "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj": {
+              "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj"
             },
-            "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
-              "projectPath": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj"
+            "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj": {
+              "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj"
             },
-            "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj": {
-              "projectPath": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj"
+            "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Infrastructure\\Autentication.Infrastructure.csproj"
             }
           }
         }
@@ -3111,7 +3113,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -3141,8 +3143,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: Se canceló una tarea."
+    }
+  ]
 }

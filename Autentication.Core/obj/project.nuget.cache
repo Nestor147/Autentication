@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZCQOdIb5nM=",
+  "dgSpecHash": "btPVQzVCksQ=",
   "success": true,
-  "projectFilePath": "D:\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
+  "projectFilePath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Autentication.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
@@ -19,5 +19,12 @@
     "C:\\Users\\nesto\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.8\\microsoft.extensions.primitives.9.0.8.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.8\\system.diagnostics.diagnosticsource.9.0.8.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: Se canceló una tarea."
+    }
+  ]
 }

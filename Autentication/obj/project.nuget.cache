@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QulE34EvBqs=",
+  "dgSpecHash": "Sb6qbu0fF/A=",
   "success": true,
-  "projectFilePath": "D:\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
+  "projectFilePath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Autentication.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nesto\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -64,5 +64,12 @@
     "C:\\Users\\nesto\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\nesto\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error al obtener los datos de vulnerabilidad del paquete: Se canceló una tarea."
+    }
+  ]
 }
