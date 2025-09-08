@@ -42,7 +42,6 @@
 #         if: failure()
 #         run: echo "❌ Falló el build o el deploy. Revisa los logs en Actions."
 
-
 name: Build & WebDeploy Backend (.NET 8)
 
 on:
@@ -55,8 +54,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup .NET 8
         uses: actions/setup-dotnet@v3
@@ -66,18 +64,14 @@ jobs:
       - name: Restore
         run: dotnet restore
 
-      - name: Publish (Release)
-        run: dotnet publish ./Autentication/Autentication.Web.csproj -c Release -o ./publish
-
-      - name: Ensure web.config is present
-        shell: pwsh
+      - name: Publish backend (Release, framework-dependent)
         run: |
-          if (!(Test-Path "./publish/web.config")) {
-            Write-Host "⚠ No se encontró web.config en ./publish. Copiando uno básico..."
-            Copy-Item "./web.config" "./publish/web.config" -ErrorAction SilentlyContinue
-          }
+          dotnet publish .\Autentication\Autentication.Web.csproj -c Release -o .\publish `
+            -p:PublishSingleFile=false -p:SelfContained=false -p:UseAppHost=false
+          mkdir publish\logs
 
-      - name: Deploy to WebDeploy (nestorvillca-001-site4)
+      # Despliegue con limpieza del destino
+      - name: Deploy to SmarterASP via WebDeploy (clean)
         uses: jahbenjah/SmarterASP.NET-web-deploy@1.0.0.alpha.8
         with:
           website-name: nestorvillca-001-site4
@@ -85,4 +79,5 @@ jobs:
           server-username: ${{ secrets.SERVER_USERNAME }}
           server-password: ${{ secrets.SERVER_PASSWORD }}
           source-path: 'publish'
-          target-delete: true
+          target-delete: true              # <- borra el destino antes de copiar
+          additional-args: '-enableRule:AppOffline'  # evita locks
