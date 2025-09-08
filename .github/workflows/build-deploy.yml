@@ -23,34 +23,14 @@ jobs:
 
       # 1) Publica SOLO Autentication.Web (framework-dependent)
       - name: Publish (Release)
-        run: |
-          dotnet publish .\Autentication\Autentication.Web.csproj -c Release -o .\publish ^
-            -p:PublishSingleFile=false -p:SelfContained=false -p:UseAppHost=false
-          mkdir publish\logs
+        run: dotnet publish ./Autentication/Autentication.Web.csproj -c Release -o ./publish -p:PublishSingleFile=false -p:SelfContained=false -p:UseAppHost=false
+
 
       # 2) Escribe web.config OUT OF PROCESS con la DLL correcta
-      - name: Write web.config (OutOfProcess)
+      - name: Ensure logs dir
         shell: pwsh
-        run: |
-          @'
-          <?xml version="1.0" encoding="utf-8"?>
-          <configuration>
-            <system.webServer>
-              <handlers>
-                <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
-              </handlers>
-              <aspNetCore processPath="dotnet"
-                          arguments="Autentication.Web.dll"
-                          hostingModel="OutOfProcess"
-                          stdoutLogEnabled="true"
-                          stdoutLogFile=".\logs\stdout">
-                <environmentVariables>
-                  <add name="ASPNETCORE_ENVIRONMENT" value="Production" />
-                </environmentVariables>
-              </aspNetCore>
-            </system.webServer>
-          </configuration>
-          '@ | Out-File -FilePath .\publish\web.config -Encoding utf8
+        run: New-Item -ItemType Directory -Force -Path publish\logs | Out-Null
+
 
       # 3) WebDeploy con limpieza de destino
       - name: Deploy to WebDeploy (nestorvillca-001-site4)
