@@ -41,8 +41,7 @@
 #       - name: ❌ Error
 #         if: failure()
 #         run: echo "❌ Falló el build o el deploy. Revisa los logs en Actions."
-
-name: Build & WebDeploy Backend (.NET 8)
+name: Deploy to SmarterASP via FTP
 
 on:
   push:
@@ -50,7 +49,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  build_and_deploy_backend:
+  build_and_deploy:
     runs-on: windows-latest
 
     steps:
@@ -64,20 +63,24 @@ jobs:
       - name: Restore
         run: dotnet restore
 
-      - name: Publish backend (Release, framework-dependent)
+      - name: Publish API (Release, framework-dependent)
         run: |
-          dotnet publish .\Autentication\Autentication.Web.csproj -c Release -o .\publish `
+          dotnet publish .\Autentication\Autentication.Web.csproj -c Release -o .\publish ^
             -p:PublishSingleFile=false -p:SelfContained=false -p:UseAppHost=false
           mkdir publish\logs
 
-      # Despliegue con limpieza del destino
-      - name: Deploy to SmarterASP via WebDeploy (clean)
-        uses: jahbenjah/SmarterASP.NET-web-deploy@1.0.0.alpha.8
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          website-name: nestorvillca-001-site4
-          server-computer-name: https://win1031.site4now.net:8172/MsDeploy.axd
-          server-username: ${{ secrets.SERVER_USERNAME }}
-          server-password: ${{ secrets.SERVER_PASSWORD }}
-          source-path: 'publish'
-          target-delete: true              # <- borra el destino antes de copiar
-          additional-args: '-enableRule:AppOffline'  # evita locks
+          server: win1031.site4now.net
+          username: nestorvillca-001
+          password: ${{ secrets.SMARTERASP_FTP_PASSWORD }}  # CONTRASEÑA DEL PANEL (no la de WebDeploy)
+          port: 21
+          protocol: ftp
+          local-dir: ./publish/
+          server-dir: /          # <- normalmente ESTA es la raíz correcta en SmarterASP
+          dangerous-clean-slate: true  # borra el destino para evitar restos
+          exclude: |
+            **/.git*
+            **/.github*
+            **/*.md
