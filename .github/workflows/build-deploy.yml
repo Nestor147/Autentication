@@ -66,8 +66,8 @@ jobs:
 
       - name: Restore
         run: dotnet restore
-        
-      - name: Build and Publish Project
+
+      - name: Publish (Release)
         run: dotnet publish -c Release -o ./publish
 
       - name: Ensure web.config is present
