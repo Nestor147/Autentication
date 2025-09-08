@@ -43,7 +43,6 @@
 #         run: echo "❌ Falló el build o el deploy. Revisa los logs en Actions."
 
 
-
 name: Build & WebDeploy Backend (.NET 8)
 
 on:
@@ -68,7 +67,7 @@ jobs:
         run: dotnet restore
 
       - name: Publish (Release)
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish ./Autentication/Autentication.Web.csproj -c Release -o ./publish
 
       - name: Ensure web.config is present
         shell: pwsh
@@ -86,4 +85,4 @@ jobs:
           server-username: ${{ secrets.SERVER_USERNAME }}
           server-password: ${{ secrets.SERVER_PASSWORD }}
           source-path: 'publish'
-          target-delete: true
+          target-delete: true
