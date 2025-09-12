@@ -4,6 +4,7 @@ using Autentication.Application.Interfaces;
 using Autentication.Application.Interfaces.Jwt;
 using Autentication.Application.Jwt;
 using Autentication.Application.Password;
+using Autentication.Application.Services.Exceptions;
 using Autentication.Core.Entities.Autorizacion;
 using Autentication.Core.Interfaces.Core;
 using Autentication.Infrastructure.Security;
@@ -593,12 +594,14 @@ public sealed class AuthService : IAuthService
                 }
 
                 // Assign VENDEDOR role
-                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
-                {
-                    IdRol = role.Id,
-                    IdUsuarioSistema = user.Id,
-                    EstadoRegistro = 1
-                }, "ASSIGN SELLER ROLE");
+                //await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                //{
+                //    IdRol = role.Id,
+                //    IdUsuarioSistema = user.Id,
+                //    EstadoRegistro = 1
+                //}, "ASSIGN SELLER ROLE");
+                await AssignRoleOnceAsync(user.Id, role.Id, "ASSIGN SELLER ROLE", ct);
+
 
                 await _uow.SaveChangesAsync();
                 await _uow.CommitTransactionAsync();
@@ -683,12 +686,14 @@ public sealed class AuthService : IAuthService
                     user.Id = again!.Id;
                 }
 
-                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
-                {
-                    IdRol = role.Id,
-                    IdUsuarioSistema = user.Id,
-                    EstadoRegistro = 1
-                }, "ASSIGN BUYER ROLE");
+                //await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                //{
+                //    IdRol = role.Id,
+                //    IdUsuarioSistema = user.Id,
+                //    EstadoRegistro = 1
+                //}, "ASSIGN BUYER ROLE");
+                await AssignRoleOnceAsync(user.Id, role.Id, "ASSIGN BUYER ROLE", ct);
+
 
                 await _uow.SaveChangesAsync();
                 await _uow.CommitTransactionAsync();
@@ -773,12 +778,14 @@ public sealed class AuthService : IAuthService
                     user.Id = again!.Id;
                 }
 
-                await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
-                {
-                    IdRol = role.Id,
-                    IdUsuarioSistema = user.Id,
-                    EstadoRegistro = 1
-                }, "ASSIGN ADMIN ROLE");
+                //await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+                //{
+                //    IdRol = role.Id,
+                //    IdUsuarioSistema = user.Id,
+                //    EstadoRegistro = 1
+                //}, "ASSIGN ADMIN ROLE");
+                await AssignRoleOnceAsync(user.Id, role.Id, "ASSIGN ADMIN ROLE", ct);
+
 
                 await _uow.SaveChangesAsync();
                 await _uow.CommitTransactionAsync();
@@ -804,6 +811,44 @@ public sealed class AuthService : IAuthService
             throw; // deja que el controller mapee a HTTP
         }
     }
+
+
+    // 👇 Helper para asignar rol una sola vez (idempotente)
+    private async Task AssignRoleOnceAsync(int userId, int roleId, string auditMsg, CancellationToken ct)
+    {
+        // ¿ya existe asignación activa?
+        var exists = await _uow.RolUsuarioRepository.Query()
+            .AsNoTracking()
+            .AnyAsync(x => x.IdUsuarioSistema == userId
+                        && x.IdRol == roleId
+                        && x.EstadoRegistro == 1, ct);
+        if (exists)
+            throw new RoleAlreadyAssignedException(userId, roleId);
+
+        // ¿existe relación inactiva (soft-deleted)?
+        var inactive = await _uow.RolUsuarioRepository.Query()
+            .FirstOrDefaultAsync(x => x.IdUsuarioSistema == userId
+                                   && x.IdRol == roleId
+                                   && x.EstadoRegistro != 1, ct);
+
+        if (inactive is not null)
+        {
+            // Reactivar
+            inactive.EstadoRegistro = 1;
+            _uow.RolUsuarioRepository.Update(inactive, $"REACTIVATE ROLE ({auditMsg})");
+        }
+        else
+        {
+            // Crear nueva relación
+            await _uow.RolUsuarioRepository.InsertAsync(new RolUsuario
+            {
+                IdRol = roleId,
+                IdUsuarioSistema = userId,
+                EstadoRegistro = 1
+            }, auditMsg);
+        }
+    }
+
 
 
 }
