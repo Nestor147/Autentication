@@ -99,46 +99,16 @@ public class AuthController : ControllerBase
     [InternalOnly]
     public async Task<ActionResult<CreateBuyerResponse>> CreateBuyer([FromBody] CreateBuyerRequest req, CancellationToken ct)
     {
-        try
-        {
-            var result = await _svc.CreateBuyerAsync(req, ct);
-            return Created($"/api/users/{result.UserId}", result);
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            return Unauthorized(new { message = ex.Message });
-        }
-        catch
-        {
-            return StatusCode(500, new { message = "Unexpected server error." });
-        }
+        var result = await _svc.CreateBuyerAsync(req, ct); // si hay duplicado → UserDuplicateException
+        return Created($"/api/users/{result.UserId}", new ApiOk<CreateBuyerResponse> { Data = result });
     }
 
     [HttpPost("admins")]
     [InternalOnly]
     public async Task<ActionResult<CreateAdminResponse>> CreateAdmin([FromBody] CreateAdminRequest req, CancellationToken ct)
     {
-        try
-        {
-            var result = await _svc.CreateAdminAsync(req, ct);
-            return Created($"/api/users/{result.UserId}", result);
-        }
-        catch (InvalidOperationException ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            return Unauthorized(new { message = ex.Message });
-        }
-        catch
-        {
-            return StatusCode(500, new { message = "Unexpected server error." });
-        }
+        var result = await _svc.CreateAdminAsync(req, ct); // si hay duplicado → UserDuplicateException
+        return Created($"/api/users/{result.UserId}", new ApiOk<CreateAdminResponse> { Data = result });
     }
 
     // JWKS en raíz (lo dejaste así, perfecto para descubrimiento OpenID)
