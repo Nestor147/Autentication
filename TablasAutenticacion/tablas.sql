@@ -143,3 +143,5 @@ CREATE TABLE Autorizacion.RolesPuntos (
         REFERENCES Autorizacion.Roles(Id)
 );
 GO
+
+---
