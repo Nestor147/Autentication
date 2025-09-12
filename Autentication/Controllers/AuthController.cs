@@ -1,6 +1,8 @@
 ﻿using Autentication.Application.DTOs;
 using Autentication.Application.DTOs.Atacado;
 using Autentication.Application.Interfaces;
+using Autentication.Core.Entities.Core;
+using Autentication.Web.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -75,29 +77,13 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("sellers")]
-    public async Task<ActionResult<CreateSellerResponse>> CreateSeller([FromBody] CreateSellerRequest req, CancellationToken ct)
+    [InternalOnly]
+    public async Task<ActionResult<ApiOk<CreateSellerResponse>>> CreateSeller([FromBody] CreateSellerRequest req, CancellationToken ct)
     {
-        try
-        {
-            var result = await _svc.CreateSellerAsync(req, ct);
-            // 201 Created es adecuado al crear un recurso; puedes incluir Location si tienes un GET.
-            return Created($"/api/users/{result.UserId}", result);
-        }
-        catch (InvalidOperationException ex)
-        {
-            // Errores de negocio/validación
-            return BadRequest(new { message = ex.Message });
-        }
-        catch (UnauthorizedAccessException ex)
-        {
-            return Unauthorized(new { message = ex.Message });
-        }
-        catch (Exception)
-        {
-            // No revelar detalles internos
-            return StatusCode(500, new { message = "Unexpected server error." });
-        }
+        var result = await _svc.CreateSellerAsync(req, ct); // si hay duplicado → UserDuplicateException
+        return Created($"/api/users/{result.UserId}", new ApiOk<CreateSellerResponse> { Data = result });
     }
+
 
     [HttpPost("password")]
     [Authorize] // requiere access token
@@ -110,6 +96,7 @@ public class AuthController : ControllerBase
 
 
     [HttpPost("buyers")]
+    [InternalOnly]
     public async Task<ActionResult<CreateBuyerResponse>> CreateBuyer([FromBody] CreateBuyerRequest req, CancellationToken ct)
     {
         try
@@ -132,6 +119,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("admins")]
+    [InternalOnly]
     public async Task<ActionResult<CreateAdminResponse>> CreateAdmin([FromBody] CreateAdminRequest req, CancellationToken ct)
     {
         try
