@@ -64,22 +64,20 @@
 //app.MapGet("/", () => "Auth API OK");
 
 //app.Run();
-
-
 using Autentication.Application.Interfaces.Jwt;
 using Autentication.Application.Jwt;
 using Autentication.Application.Password;
 using Autentication.Infrastructure.DependencyInjection;
-using Autentication.Web.Middlewares;
-using Autentication.Web.Security; // si tienes atributos/filters aquí (p.ej., InternalOnly/ValidationFilter)
+using Autentication.Web.Middlewares; // ApiExceptionMiddleware
+using Autentication.Web.Security;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1) Infra (DbContext, UoW, repos, etc. – lo que ya registras dentro)
+// 1) Infraestructura (DbContext, UoW, repos, etc.)
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// 2) Llaves (passphrase/kid/bits) desde ENV o appsettings
+// 2) Claves/JWT (leer passphrase/kid/bits desde ENV o appsettings)
 var passphrase = Environment.GetEnvironmentVariable("AUTH_KEY_PASSPHRASE")
                  ?? builder.Configuration["Auth:KeyPassphrase"]
                  ?? throw new InvalidOperationException("Falta AUTH_KEY_PASSPHRASE o Auth:KeyPassphrase");
@@ -87,7 +85,7 @@ var passphrase = Environment.GetEnvironmentVariable("AUTH_KEY_PASSPHRASE")
 var kid = builder.Configuration["Auth:Kid"] ?? "k1";
 var rsaBits = int.TryParse(builder.Configuration["Auth:RsaBits"], out var bits) ? bits : 2048;
 
-// 3) Carga o crea llaves y expone emisor de JWT
+// 3) Crea/emite llaves y emisor JWT
 var keyDir = Path.Combine(builder.Environment.ContentRootPath, "keys");
 var keys = KeyStore.LoadOrCreate(passphrase, keyDir, kid: kid, rsaBits: rsaBits);
 
@@ -95,17 +93,17 @@ builder.Services.AddSingleton<IJwtIssuer>(new RsaJwtIssuer(keys.PrivatePem, keyI
 builder.Services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
 builder.Services.AddHttpContextAccessor();
 
-// 4) Controllers + (opcional) filtro de validación global
-builder.Services.AddControllers(options =>
-{
-    // Descomenta si creaste el filtro de validación:
-    // options.Filters.Add<ValidationFilter>();
-})
-// Opcional: JSON camelCase y enums como string
-.AddJsonOptions(o =>
-{
-    o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
-});
+// 4) Controllers (JSON en camelCase; NO mapeo automático de ProblemDetails de cliente si quieres evitar sorpresas)
+builder.Services.AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    })
+    .ConfigureApiBehaviorOptions(o =>
+    {
+        // Opcional: si no quieres que ASP.NET genere ProblemDetails 4xx/5xx automáticos.
+        o.SuppressMapClientErrors = true;
+    });
 
 // 5) Swagger
 builder.Services.AddEndpointsApiExplorer();
@@ -114,9 +112,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Auth API", Version = "v1" });
 });
 
-// 6) CORS (abrir según tu necesidad)
-//   IMPORTANTE: Para llamadas server-to-server no necesitas CORS.
-//   Mantener abierto si probarás desde Swagger u orígenes varios.
+// 6) CORS (ajusta según necesidad)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AppCors", p => p
@@ -127,55 +123,56 @@ builder.Services.AddCors(options =>
     );
 });
 
-// 7) Middleware global de excepciones (ApiError uniforme)
+// 7) Registra el middleware de excepciones (se usará solo en ciertas rutas)
 builder.Services.AddTransient<ApiExceptionMiddleware>();
 
-// // 8) (Opcional) Autenticación/JWT si vas a proteger endpoints con [Authorize]
+// 8) (Opcional) Autenticación/Autorización si usas [Authorize]
 // builder.Services.AddAuthentication(/* esquema */);
 // builder.Services.AddAuthorization(/* policies */);
 
 var app = builder.Build();
 
-// 9) Developer exception page (solo si quieres ver stack en dev).
-//    Si lo dejas activo, en Development verás la página de error de ASP.NET
-//    en lugar de tu formato ApiError. Puedes comentarlo para unificar.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
+// ?? No uses DeveloperExceptionPage si quieres respuestas uniformes en tus tres controladores
+// if (app.Environment.IsDevelopment()) { app.UseDeveloperExceptionPage(); }
 
-// 10) Swagger
+// --- RUTAS que SÍ tendrán manejo de errores con ApiExceptionMiddleware ---
+// REEMPLAZA estas 3 cadenas por tus rutas base reales (de esos 3 controladores):
+var handledPrefixes = new[]
+{
+    "/api/auth",        // p.ej. AuthController
+    "/api/users",       // p.ej. UsersController
+    "/api/admins"       // p.ej. AdminsController
+};
+
+// 9) Usa el middleware de excepciones SOLO cuando el Path coincida con tus prefijos
+app.UseWhen(
+    ctx => handledPrefixes.Any(p =>
+        ctx.Request.Path.StartsWithSegments(p, StringComparison.OrdinalIgnoreCase)),
+    branch =>
+    {
+        // Ponlo al INICIO del branch para envolver todo lo que sigue
+        branch.UseMiddleware<ApiExceptionMiddleware>();
+    }
+);
+
+// 10) El resto del pipeline
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Auth API v1");
 });
 
-// 11) Orden del pipeline
 app.UseRouting();
-
-// ?? Tu middleware global de errores (antes de CORS/Auth y de MapControllers)
-app.UseMiddleware<ApiExceptionMiddleware>();
 
 app.UseCors("AppCors");
 app.UseHttpsRedirection();
 
-// // Si activas JWT/Policies en controladores:
+// Si activas JWT/Policies en controladores:
 // app.UseAuthentication();
 // app.UseAuthorization();
 
-// 12) Endpoints
+// 11) Endpoints
 app.MapControllers();
 app.MapGet("/", () => "Auth API OK");
 
 app.Run();
-
-
-// -------------- Tip: clases usadas --------------
-// Asegúrate de tener estas clases en tu proyecto:
-//
-// - ApiExceptionMiddleware  (mapea DomainException/401/500 -> ApiError JSON)
-// - DomainException y tus excepciones concretas (UserDuplicateException, etc.)
-// - ApiOk<T> / ApiError (contratos de respuesta uniformes)
-// - KeyStore.LoadOrCreate(...) (tu util para llaves RSA)
-// - RsaJwtIssuer (emisor de tokens con tu private.pem)

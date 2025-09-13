@@ -1,81 +1,89 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\",
+  "WorkspaceRootPath": "D:\\Atacado\\Autentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\security\\internalonlyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\security\\internalonlyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\middlewares\\apiexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\middlewares\\apiexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\controllers\\pingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\pingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\services\\exceptions\\rolealreadyassignedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\services\\exceptions\\rolealreadyassignedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\services\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\services\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\services\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication\\security\\keystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\middlewares\\apiexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\middlewares\\apiexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\security\\internalonlyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\security\\internalonlyattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\pingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\pingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\security\\keystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\security\\keystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.core\\entities\\core\\apierror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\core\\apierror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\core\\apierror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.core\\entities\\core\\apiok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|d:\\atacado\\autentication\\autentication.core\\entities\\core\\apiok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D0BC6DA7-4CCA-4A0D-AA23-93139A692BC2}|Autentication.Core\\Autentication.Core.csproj|solutionrelative:autentication.core\\entities\\core\\apiok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createbuyerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createbuyerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createbuyerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createsellerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createsellerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createsellerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createadminrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createadminrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createadminrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\autentication.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\autentication.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\autentication.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createadminresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createadminresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createadminresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createbuyerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createbuyerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createbuyerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|c:\\users\\nesto\\onedrive\\escritorio\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createsellerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\dtos\\atacado\\createsellerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\dtos\\atacado\\createsellerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -86,119 +94,142 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RoleAlreadyAssignedException.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\RoleAlreadyAssignedException.cs",
-              "RelativeDocumentMoniker": "Autentication.Application\\Services\\Exceptions\\RoleAlreadyAssignedException.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\RoleAlreadyAssignedException.cs",
-              "RelativeToolTip": "Autentication.Application\\Services\\Exceptions\\RoleAlreadyAssignedException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
+              "RelativeToolTip": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:38:05.143Z",
+              "WhenOpened": "2025-09-13T20:28:41.8Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Autentication\\WeatherForecast.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\WeatherForecast.cs",
+              "RelativeToolTip": "Autentication\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T19:34:28.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\appsettings.json",
+              "RelativeDocumentMoniker": "Autentication\\appsettings.json",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\appsettings.json",
+              "RelativeToolTip": "Autentication\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-13T19:19:37.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "InternalOnlyAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Security\\InternalOnlyAttribute.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Security\\InternalOnlyAttribute.cs",
               "RelativeDocumentMoniker": "Autentication\\Security\\InternalOnlyAttribute.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Security\\InternalOnlyAttribute.cs*",
-              "RelativeToolTip": "Autentication\\Security\\InternalOnlyAttribute.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Security\\InternalOnlyAttribute.cs",
+              "RelativeToolTip": "Autentication\\Security\\InternalOnlyAttribute.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T12:31:16.736Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "KeyStore.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Security\\KeyStore.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Security\\KeyStore.cs",
               "RelativeDocumentMoniker": "Autentication\\Security\\KeyStore.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Security\\KeyStore.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Security\\KeyStore.cs",
               "RelativeToolTip": "Autentication\\Security\\KeyStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:31:00.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:31:00.032Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Program.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Program.cs",
               "RelativeDocumentMoniker": "Autentication\\Program.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Program.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Program.cs",
               "RelativeToolTip": "Autentication\\Program.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAYwLUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAADwv7IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T12:25:16.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ApiExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Middlewares\\ApiExceptionMiddleware.cs*",
-              "RelativeToolTip": "Autentication\\Middlewares\\ApiExceptionMiddleware.cs*",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwHYAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
+              "RelativeToolTip": "Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T12:25:02.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "DomainException.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\DomainException.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\DomainException.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Services\\Exceptions\\DomainException.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\DomainException.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\DomainException.cs",
               "RelativeToolTip": "Autentication.Application\\Services\\Exceptions\\DomainException.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAA3wCsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T12:23:41.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ApiError.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiError.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiError.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Core\\ApiError.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiError.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiError.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Core\\ApiError.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:22:48.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:22:48.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ApiOk.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiOk.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiOk.cs",
               "RelativeDocumentMoniker": "Autentication.Core\\Entities\\Core\\ApiOk.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiOk.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Core\\Entities\\Core\\ApiOk.cs",
               "RelativeToolTip": "Autentication.Core\\Entities\\Core\\ApiOk.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:22:35.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:22:35.638Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "PingController.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Controllers\\PingController.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\PingController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\PingController.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Controllers\\PingController.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\PingController.cs",
               "RelativeToolTip": "Autentication\\Controllers\\PingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -207,11 +238,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Autentication.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
               "RelativeDocumentMoniker": "Autentication.Application\\Autentication.Application.csproj",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Autentication.Application.csproj",
               "RelativeToolTip": "Autentication.Application\\Autentication.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -219,11 +250,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CreateAdminResponse.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateAdminResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -231,11 +262,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "CreateAdminRequest.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateAdminRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -243,11 +274,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CreateBuyerResponse.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateBuyerResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -255,37 +286,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "CreateBuyerRequest.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateBuyerRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:51:43.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T12:51:43.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Autentication.Application\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBIAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T12:50:32.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CreateSellerResponse.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateSellerResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -293,11 +323,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CreateSellerRequest.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
               "RelativeToolTip": "Autentication.Application\\DTOs\\Atacado\\CreateSellerRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -305,26 +335,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "Autentication\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwHYAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Autentication\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T12:47:02.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
+              "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\nesto\\OneDrive\\Escritorio\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
               "RelativeToolTip": "Autentication.Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAADIDAAAAAAAAAAAYwFYDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEBAAAAAAAAAAArwGEBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T12:35:00.038Z",
               "EditorCaption": ""

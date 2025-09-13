@@ -77,7 +77,6 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("sellers")]
-    [InternalOnly]
     public async Task<ActionResult<ApiOk<CreateSellerResponse>>> CreateSeller([FromBody] CreateSellerRequest req, CancellationToken ct)
     {
         var result = await _svc.CreateSellerAsync(req, ct); // si hay duplicado → UserDuplicateException
@@ -96,7 +95,6 @@ public class AuthController : ControllerBase
 
 
     [HttpPost("buyers")]
-    [InternalOnly]
     public async Task<ActionResult<CreateBuyerResponse>> CreateBuyer([FromBody] CreateBuyerRequest req, CancellationToken ct)
     {
         var result = await _svc.CreateBuyerAsync(req, ct); // si hay duplicado → UserDuplicateException
@@ -104,7 +102,6 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("admins")]
-    [InternalOnly]
     public async Task<ActionResult<CreateAdminResponse>> CreateAdmin([FromBody] CreateAdminRequest req, CancellationToken ct)
     {
         var result = await _svc.CreateAdminAsync(req, ct); // si hay duplicado → UserDuplicateException
@@ -115,4 +112,15 @@ public class AuthController : ControllerBase
     [HttpGet("/.well-known/jwks.json")]
     [AllowAnonymous]
     public IActionResult JwksRoot() => Content(_svc.GetJwks(), "application/json");
+
+
+    //[HttpPost("credentials")]
+    //[Authorize]
+    //public async Task<IActionResult> UpdateCredentials([FromBody] UpdateCredentialsRequest req, CancellationToken ct)
+    //{
+    //    await _svc.UpdateCredentialsAsync(req.UserId, req.NewUsername, req.NewPassword, ct);
+    //    return Ok();
+    //}
+
+    //public sealed record UpdateCredentialsRequest(int UserId, string? NewUsername, string? NewPassword);
 }

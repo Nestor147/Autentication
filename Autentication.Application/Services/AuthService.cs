@@ -48,20 +48,20 @@ public sealed class AuthService : IAuthService
         if (user is null)
         {
             await RegistrarIntento(req.Username, null, false, "Usuario no existe", ct);
-            throw new UnauthorizedAccessException();
+            throw new InvalidCredentialsException();
         }
 
         if (user.Locked)
         {
             await RegistrarIntento(req.Username, user.Id, false, "Usuario bloqueado", ct);
-            throw new UnauthorizedAccessException();
+            throw new UserLockedException();
         }
 
         // 2) Password
         if (!_hasher.Verify(user.Password, req.Password))
         {
             await RegistrarIntento(req.Username, user.Id, false, "Password inválido", ct);
-            throw new UnauthorizedAccessException();
+            throw new InvalidCredentialsException();
         }
 
         // 3) Roles  (JOIN: RolesUsuarios -> Rol)
@@ -251,11 +251,12 @@ public sealed class AuthService : IAuthService
 
     public async Task<RegisterResponse> RegisterAsync(RegisterRequest req, CancellationToken ct)
     {
+        await EnforceUniquenessAsync(username: req.Username.Trim(),idUsuarioGeneral: req.IdUsuarioGeneral, ct);
         // 1) Validar duplicados
         var exists = await _uow.UsuarioSistemaRepository
             .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
         if (exists is not null)
-            throw new InvalidOperationException("El username ya está registrado.");
+            throw new UserDuplicateException("El username ya está registrado.");
 
         // 2) Hash de password
         var hash = _hasher.Hash(req.Password);
@@ -351,15 +352,16 @@ public sealed class AuthService : IAuthService
 
     public async Task<TokenPair> RegisterBuyerAtacadoAsync(RegisterBuyerRequest req, CancellationToken ct)
     {
+
         // 0) Validaciones básicas
         if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
-            throw new InvalidOperationException("Username y Password son requeridos.");
+            throw new ValidationException("Username y Password son requeridos.");
 
         // 1) Resolver aplicación ATACADO (lecturas FUERA de transacción y sin tracking)
         var aplicacion = await _uow.AplicacionRepository.Query()
             .AsNoTracking()
             .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
-            ?? throw new InvalidOperationException("La aplicación ATACADO no existe o está inactiva.");
+            ?? throw new AppNotFoundException("La aplicación ATACADO no existe o está inactiva.");
 
         // 2) Resolver rol COMPRADOR en esa app (lectura FUERA de transacción y sin tracking)
         var rol = await _uow.RolRepository.Query()
@@ -367,13 +369,13 @@ public sealed class AuthService : IAuthService
             .FirstOrDefaultAsync(r => r.IdAplicacion == aplicacion.Id
                                    && r.EstadoRegistro == 1
                                    && r.Nombre.ToUpper() == "COMPRADOR", ct)
-            ?? throw new InvalidOperationException("No existe el rol COMPRADOR para ATACADO.");
+            ?? throw new RoleNotFoundException("No existe el rol COMPRADOR para ATACADO.");
 
         // 3) Validar duplicados (igual que RegisterAsync)
         var exists = await _uow.UsuarioSistemaRepository
             .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
         if (exists is not null)
-            throw new InvalidOperationException("El username ya está registrado.");
+            throw new UserDuplicateException("El username ya está registrado.");
 
         // 4) Hash de password (igual que RegisterAsync)
         var hash = _hasher.Hash(req.Password);
@@ -535,9 +537,11 @@ public sealed class AuthService : IAuthService
 
     public async Task<CreateSellerResponse> CreateSellerAsync(CreateSellerRequest req, CancellationToken ct)
     {
+        await EnforceUniquenessAsync(username: req.Username.Trim(), idUsuarioGeneral: req.IdUsuarioGeneral, ct);
+
         // Basic input validation
         if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
-            throw new InvalidOperationException("Username and Password are required.");
+            throw new ValidationException("Username and Password are required.");
 
         try
         {
@@ -545,7 +549,7 @@ public sealed class AuthService : IAuthService
             var app = await _uow.AplicacionRepository.Query()
                 .AsNoTracking()
                 .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
-                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+                ?? throw new AppNotFoundException("Application ATACADO does not exist or is inactive.");
 
             // Resolve VENDEDOR role for ATACADO (read, no tracking)
             var role = await _uow.RolRepository.Query()
@@ -553,13 +557,13 @@ public sealed class AuthService : IAuthService
                 .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
                                        && r.EstadoRegistro == 1
                                        && r.Nombre.ToUpper() == "VENDEDOR", ct)
-                ?? throw new InvalidOperationException("Role VENDEDOR does not exist for ATACADO.");
+                ?? throw new RoleNotFoundException("Role VENDEDOR does not exist for ATACADO.");
 
             // Check duplicates
             var exists = await _uow.UsuarioSistemaRepository
                 .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
             if (exists is not null)
-                throw new InvalidOperationException("The username is already registered.");
+                throw new UserDuplicateException("The username is already registered.");
 
             // Hash password
             var hash = _hasher.Hash(req.Password);
@@ -631,8 +635,10 @@ public sealed class AuthService : IAuthService
 
     public async Task<CreateBuyerResponse> CreateBuyerAsync(CreateBuyerRequest req, CancellationToken ct)
     {
+        await EnforceUniquenessAsync(username: req.Username.Trim(), idUsuarioGeneral: req.IdUsuarioGeneral, ct);
+
         if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
-            throw new InvalidOperationException("Username and Password are required.");
+            throw new ValidationException("Username and Password are required.");
 
         try
         {
@@ -640,7 +646,7 @@ public sealed class AuthService : IAuthService
             var app = await _uow.AplicacionRepository.Query()
                 .AsNoTracking()
                 .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
-                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+                ?? throw new AppNotFoundException("Application ATACADO does not exist or is inactive.");
 
             // 2) Rol COMPRADOR
             var role = await _uow.RolRepository.Query()
@@ -648,13 +654,13 @@ public sealed class AuthService : IAuthService
                 .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
                                        && r.EstadoRegistro == 1
                                        && r.Nombre.ToUpper() == "COMPRADOR", ct)
-                ?? throw new InvalidOperationException("Role COMPRADOR does not exist for ATACADO.");
+                ?? throw new RoleNotFoundException("Role COMPRADOR does not exist for ATACADO.");
 
             // 3) Duplicados (solo activos)
             var exists = await _uow.UsuarioSistemaRepository
                 .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
             if (exists is not null)
-                throw new InvalidOperationException("The username is already registered.");
+                throw new UserDuplicateException("The username is already registered.");
 
             // 4) Hash password
             var hash = _hasher.Hash(req.Password);
@@ -723,8 +729,10 @@ public sealed class AuthService : IAuthService
 
     public async Task<CreateAdminResponse> CreateAdminAsync(CreateAdminRequest req, CancellationToken ct)
     {
+        await EnforceUniquenessAsync(username: req.Username.Trim(), idUsuarioGeneral: req.IdUsuarioGeneral, ct);
+
         if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
-            throw new InvalidOperationException("Username and Password are required.");
+            throw new ValidationException("Username and Password are required.");
 
         try
         {
@@ -732,7 +740,7 @@ public sealed class AuthService : IAuthService
             var app = await _uow.AplicacionRepository.Query()
                 .AsNoTracking()
                 .FirstOrDefaultAsync(a => a.Sigla == "ATACADO" && a.EstadoRegistro == 1, ct)
-                ?? throw new InvalidOperationException("Application ATACADO does not exist or is inactive.");
+                ?? throw new AppNotFoundException("Application ATACADO does not exist or is inactive.");
 
             // 2) Rol ADMINISTRADOR (soporta también "ADMIN")
             var role = await _uow.RolRepository.Query()
@@ -740,13 +748,13 @@ public sealed class AuthService : IAuthService
                 .FirstOrDefaultAsync(r => r.IdAplicacion == app.Id
                                        && r.EstadoRegistro == 1
                                        && (r.Nombre.ToUpper() == "ADMINISTRADOR" || r.Nombre.ToUpper() == "ADMIN"), ct)
-                ?? throw new InvalidOperationException("Role ADMINISTRADOR/ADMIN does not exist for ATACADO.");
+                ?? throw new RoleNotFoundException("Role ADMINISTRADOR/ADMIN does not exist for ATACADO.");
 
             // 3) Duplicados (solo activos; ajusta si quieres bloquear también inactivos)
             var exists = await _uow.UsuarioSistemaRepository
                 .FirstOrDefaultAsync(u => u.Username == req.Username && u.EstadoRegistro == 1, ct);
             if (exists is not null)
-                throw new InvalidOperationException("The username is already registered.");
+                throw new UserDuplicateException("The username is already registered.");
 
             // 4) Hash password
             var hash = _hasher.Hash(req.Password);
@@ -848,6 +856,67 @@ public sealed class AuthService : IAuthService
             }, auditMsg);
         }
     }
+
+
+    //public async Task UpdateCredentialsAsync(int userId, string? newUsername, string? newPassword, CancellationToken ct)
+    //{
+    //    // 1) Cargar usuario
+    //    var user = await _uow.UsuarioSistemaRepository
+    //        .FirstOrDefaultAsync(u => u.Id == userId && u.EstadoRegistro == 1, ct)
+    //        ?? throw new UserNotFoundException();
+
+    //    // 2) Cambiar username (si viene y es distinto)
+    //    if (!string.IsNullOrWhiteSpace(newUsername) && !string.Equals(newUsername, user.Username, StringComparison.Ordinal))
+    //    {
+    //        // ¿lo usa otro activo?
+    //        var exists = await _uow.UsuarioSistemaRepository
+    //            .AnyAsync(u => u.Username == newUsername && u.EstadoRegistro == 1 && u.Id != user.Id, ct);
+    //        if (exists)
+    //            throw new UserDuplicateException(newUsername);
+
+    //        user.Username = newUsername.Trim();
+    //    }
+
+    //    // 3) Cambiar password (si viene)
+    //    if (!string.IsNullOrWhiteSpace(newPassword))
+    //    {
+    //        // (opcional) valida robustez aquí; si falla:
+    //        // throw new WeakPasswordException("La contraseña debe ...");
+
+    //        user.Password = _hasher.Hash(newPassword);
+    //        user.UltimoCambio = DateTime.UtcNow;
+    //    }
+
+    //    _uow.UsuarioSistemaRepository.Update(user, "UPDATE CREDENTIALS");
+    //    await _uow.SaveChangesAsync();
+    //}
+
+    private async Task EnforceUniquenessAsync(string username, int? idUsuarioGeneral, CancellationToken ct)
+    {
+        username = username.Trim();
+
+        // 1) Username ya usado por otro activo
+        var usernameTaken = await _uow.UsuarioSistemaRepository
+            .Query() // IQueryable<UsuarioSistema>
+            .AnyAsync(u => u.EstadoRegistro == 1 && u.Username == username, ct);
+
+        if (usernameTaken)
+            throw new UserDuplicateException(username);
+
+        // 2) Misma persona (si viene IdUsuarioGeneral > 0)
+        if (idUsuarioGeneral.HasValue && idUsuarioGeneral.Value > 0)
+        {
+            var personHasUser = await _uow.UsuarioSistemaRepository
+                .Query()
+                .AnyAsync(u => u.EstadoRegistro == 1 && u.IdUsuarioGeneral == idUsuarioGeneral.Value, ct);
+
+            if (personHasUser)
+                throw new GeneralUserAlreadyLinkedException(idUsuarioGeneral.Value);
+        }
+    }
+
+
+
 
 
 
