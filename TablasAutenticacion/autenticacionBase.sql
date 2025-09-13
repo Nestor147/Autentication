@@ -141,3 +141,6 @@ CREATE TABLE Autorizacion.AuditoriaLogins (
         REFERENCES Autorizacion.UsuariosSistema(Id)
 );
 GO
+
+
+----
