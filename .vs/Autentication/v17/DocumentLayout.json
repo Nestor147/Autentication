@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Atacado\\Autentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|solutionrelative:autentication.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|d:\\atacado\\autentication\\autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5372911E-9972-4EC9-868D-BFC6E08F6DF9}|Autentication.Infrastructure\\Autentication.Infrastructure.csproj|solutionrelative:autentication.infrastructure\\context\\core\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE7E3B06-28A1-4961-A8D5-8E8F79B83C82}|Autentication.Application\\Autentication.Application.csproj|d:\\atacado\\autentication\\autentication.application\\services\\exceptions\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|solutionrelative:autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{478FC287-8BDC-488C-87E2-C519C92E6C79}|Autentication\\Autentication.Web.csproj|d:\\atacado\\autentication\\autentication\\controllers\\pingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
@@ -118,12 +118,11 @@
               "RelativeToolTip": "Autentication.Infrastructure\\Context\\Core\\GenericRepository.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T20:28:41.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T20:28:41.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Autentication\\WeatherForecast.cs",
@@ -131,25 +130,24 @@
               "RelativeToolTip": "Autentication\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T19:34:28.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T19:34:28.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\appsettings.json",
               "RelativeDocumentMoniker": "Autentication\\appsettings.json",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\appsettings.json",
               "RelativeToolTip": "Autentication\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-13T19:19:37.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "InternalOnlyAttribute.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Security\\InternalOnlyAttribute.cs",
               "RelativeDocumentMoniker": "Autentication\\Security\\InternalOnlyAttribute.cs",
@@ -157,8 +155,7 @@
               "RelativeToolTip": "Autentication\\Security\\InternalOnlyAttribute.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAswDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:31:16.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:31:16.736Z"
             },
             {
               "$type": "Document",
@@ -174,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Program.cs",
               "RelativeDocumentMoniker": "Autentication\\Program.cs",
@@ -182,12 +179,11 @@
               "RelativeToolTip": "Autentication\\Program.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAADwv7IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:25:16.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:25:16.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ApiExceptionMiddleware.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
@@ -195,12 +191,11 @@
               "RelativeToolTip": "Autentication\\Middlewares\\ApiExceptionMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:25:02.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:25:02.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DomainException.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\Exceptions\\DomainException.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Services\\Exceptions\\DomainException.cs",
@@ -208,8 +203,7 @@
               "RelativeToolTip": "Autentication.Application\\Services\\Exceptions\\DomainException.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAA3wCsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:23:41.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T12:23:41.793Z"
             },
             {
               "$type": "Document",
@@ -245,8 +239,7 @@
               "RelativeToolTip": "Autentication\\Controllers\\PingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T22:25:09.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-10T22:25:09.941Z"
             },
             {
               "$type": "Document",
@@ -310,16 +303,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Autentication.Application\\Interfaces\\IAuthService.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Autentication.Application\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBQAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:50:32.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T12:50:32.202Z"
             },
             {
               "$type": "Document",
@@ -347,16 +339,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Autentication\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Autentication\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFAAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T12:47:02.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T12:47:02.814Z"
             },
             {
               "$type": "Document",
@@ -366,7 +357,7 @@
               "RelativeDocumentMoniker": "Autentication.Application\\Services\\AuthService.cs",
               "ToolTip": "D:\\Atacado\\Autentication\\Autentication.Application\\Services\\AuthService.cs",
               "RelativeToolTip": "Autentication.Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAAFEBAAAAAAAAAAArwGEBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACECAAAAAAAAAAAgwCQCAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-31T12:35:00.038Z",
               "EditorCaption": ""
